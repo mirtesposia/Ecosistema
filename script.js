@@ -3,13 +3,13 @@ const LOGO = '<img class="logo-inline" src="assets/logo-confrapag.png" alt="conf
 const ECOSYSTEM = {
   products: {
     pix: {
-      name: "PIX",
+      name: "Confra PIX",
       tag: "Recebimento e envio instantâneo",
-      title: `PIX no arranjo ${LOGO}`,
+      title: `Confra PIX no arranjo ${LOGO}`,
       summary:
         "Soluções completas para recebimentos e pagamentos instantâneos com segurança, agilidade e alta disponibilidade.",
       detail:
-        "Toda transação PIX é capturada em tempo real e encaminhada à central de conciliação para classificação, apuração e liquidação na conta concentradora do MT.",
+        "Toda transação Confra PIX é capturada em tempo real e encaminhada à central de conciliação para classificação, apuração e liquidação na conta concentradora do MT.",
       checks: [
         "QR Code, chave PIX, API e PDV",
         "Liquidação na conta concentradora",
@@ -17,7 +17,7 @@ const ECOSYSTEM = {
         "Receita: tarifa sobre envio e recebimento",
       ],
       flow: [
-        "Cliente inicia PIX de recebimento ou envio",
+        "Cliente inicia Confra PIX de recebimento ou envio",
         "Transação autorizada e liquidada",
         "Evento chega à captura da central",
         "Receita creditada na conta MT",
@@ -27,13 +27,13 @@ const ECOSYSTEM = {
       partnerShare: 0.4,
     },
     tef: {
-      name: "TEF",
+      name: "Confra TEF",
       tag: "Ponto de venda físico e digital",
-      title: "TEF integrado ao PDV",
+      title: "Confra TEF integrado ao PDV",
       summary:
         "Soluções de pagamento integrado para o ponto de venda físico e digital com confiabilidade e eficiência.",
       detail:
-        "A venda no PDV ou pinpad é autorizada, entra na apuração TEF e a receita correspondente é liquidada na conta MT.",
+        "A venda no PDV ou pinpad é autorizada, entra na apuração Confra TEF e a receita correspondente é liquidada na conta MT.",
       checks: [
         "PDV físico, pinpad e canais digitais",
         "Multiadquirência e conciliação por estabelecimento",
@@ -43,7 +43,7 @@ const ECOSYSTEM = {
       flow: [
         "Venda no PDV ou pinpad",
         "Autorização da bandeira/adquirente",
-        "Transação entra na apuração TEF",
+        "Transação entra na apuração Confra TEF",
         "Receita liquidada na conta MT",
       ],
       revenue: "Tarifa sobre transações de pagamento no ponto de venda.",
@@ -51,13 +51,13 @@ const ECOSYSTEM = {
       partnerShare: 0.45,
     },
     system: {
-      name: "SYSTEM",
+      name: "Confra SYSTEM",
       tag: "Plataforma, APIs e gestão",
-      title: "SYSTEM — a espinha dorsal tecnológica",
+      title: "Confra SYSTEM — a espinha dorsal tecnológica",
       summary:
         "Plataforma tecnológica e APIs robustas para integração, automação e gestão completa das operações.",
       detail:
-        "Portal, APIs e backoffice registram o uso da plataforma. Mensalidades e serviços entram na apuração SYSTEM e liquidam na conta MT.",
+        "Portal, APIs e backoffice registram o uso da plataforma. Mensalidades e serviços entram na apuração Confra SYSTEM e liquidam na conta MT.",
       checks: [
         "APIs de integração, automação e backoffice",
         "Gestão de operações, usuários e regras",
@@ -67,7 +67,7 @@ const ECOSYSTEM = {
       flow: [
         "Operação usa portal, API ou PDV",
         "Serviços e eventos são registrados",
-        "Uso entra na apuração SYSTEM",
+        "Uso entra na apuração Confra SYSTEM",
         "Mensalidades e taxas na conta MT",
       ],
       revenue: "Mensalidade de uso da plataforma e serviços.",
@@ -75,13 +75,13 @@ const ECOSYSTEM = {
       partnerShare: 0.3,
     },
     hub: {
-      name: "HUB",
+      name: "Confra HUB",
       tag: "Soluções para o Estabelecimento Comercial (EC)",
-      title: "HUB de serviços financeiros",
+      title: "Confra HUB de serviços financeiros",
       summary:
         "Soluções inteligentes",
       detail:
-        "Cada serviço do HUB gera transação, tarifa e comissão no mesmo mecanismo de apuração, com liquidação na conta MT.",
+        "Cada serviço do Confra HUB gera transação, tarifa e comissão no mesmo mecanismo de apuração, com liquidação na conta MT.",
       checks: [
         "Cinco famílias de solução no mesmo hub",
         "Foco em economia, regularização e sustentabilidade",
@@ -89,7 +89,7 @@ const ECOSYSTEM = {
         "Receita: taxa sobre serviços ao Estabelecimento Comercial (EC)",
       ],
       flow: [
-        "Estabelecimento Comercial (EC) contrata o serviço do HUB",
+        "Estabelecimento Comercial (EC) contrata o serviço do Confra HUB",
         "Operação é processada no produto",
         "Taxa e comissão são calculadas",
         "Valor liquidado na conta MT",
@@ -102,7 +102,7 @@ const ECOSYSTEM = {
   hubServices: {
     veicular: {
       name: "Débitos veiculares",
-      text: "Regularização de IPVA, licenciamento e débitos do veículo em um fluxo único, com tarifa e comissão apuradas no HUB.",
+      text: "Regularização de IPVA, licenciamento e débitos do veículo em um fluxo único, com tarifa e comissão apuradas no Confra HUB.",
     },
     tributos: {
       name: "Parcelamento de tributos",
@@ -125,7 +125,7 @@ const ECOSYSTEM = {
     {
       n: 1,
       name: "Captura",
-      text: "Todas as transações dos produtos (PIX, TEF, SYSTEM e HUB) são capturadas em tempo real.",
+      text: "Todas as transações dos produtos (Confra PIX, Confra TEF, Confra SYSTEM e Confra HUB) são capturadas em tempo real.",
       icon: '<svg viewBox="0 0 48 48"><rect x="10" y="8" width="22" height="28" rx="2"/><circle cx="32" cy="30" r="8"/><path d="m36 34 6 6"/></svg>',
     },
     {
@@ -158,7 +158,7 @@ const ECOSYSTEM = {
       title: "Dimensões da apuração",
       text: "Cada transação é classificada em múltiplos eixos para garantir rastreabilidade e conferência.",
       items: [
-        "Produto de origem (PIX, TEF, SYSTEM, HUB)",
+        "Produto de origem (Confra PIX, Confra TEF, Confra SYSTEM, Confra HUB)",
         "Operação cliente e estabelecimento",
         "Canal (PDV, API, app, portal)",
         "Data de captura, liquidação e competência",
@@ -186,7 +186,7 @@ const ECOSYSTEM = {
     },
   ],
   layers: [
-    { n: "Camada 1", title: "Origem", text: "Estabelecimentos Comerciais (EC) e usuários finais geram transações nos canais PIX, TEF, SYSTEM e HUB." },
+    { n: "Camada 1", title: "Origem", text: "Estabelecimentos Comerciais (EC) e usuários finais geram transações nos canais Confra PIX, Confra TEF, Confra SYSTEM e Confra HUB." },
     { n: "Camada 2", title: "Produtos", text: "Cada produto processa, autoriza e registra o evento, mantendo a especialização da ponta." },
     { n: "Camada 3", title: `Central ${LOGO}`, text: "Conciliação, classificação, regras de comissão e visão única das 16 operações." },
     { n: "Camada 4", title: "Conta MT", text: "Liquidação financeira concentrada. Único ponto de entrada de receita do ecossistema." },
@@ -207,9 +207,10 @@ const toggle = document.querySelector(".nav-toggle");
 const inspector = document.querySelector("#inspector");
 const inspectorContent = document.querySelector("#inspector-content");
 const simProduct = document.querySelector("#sim-product");
-const simService = document.querySelector("#sim-service");
-const simServiceWrap = document.querySelector("#sim-service-wrap");
 const simAmount = document.querySelector("#sim-amount");
+const simRevenue = document.querySelector("#sim-revenue");
+const simCommission = document.querySelector("#sim-commission");
+const simOperation = document.querySelector("#sim-operation");
 const simTrack = document.querySelector("#sim-track");
 const simReceipt = document.querySelector("#sim-receipt");
 let pipelineTimer = 0;
@@ -330,20 +331,252 @@ function renderStaticBlocks() {
   }
 }
 
-function renderSimulatorOptions() {
-  if (!simProduct || !simService) return;
-  simProduct.innerHTML = Object.entries(ECOSYSTEM.products)
-    .map(([id, product]) => `<option value="${id}">${product.name}</option>`)
-    .join("");
-  simService.innerHTML = Object.entries(ECOSYSTEM.hubServices)
-    .map(([id, service]) => `<option value="${id}">${service.name}</option>`)
-    .join("");
-  toggleHubService();
+function productEntries(productId) {
+  if (productId === "all") return Object.entries(ECOSYSTEM.products);
+  const product = ECOSYSTEM.products[productId];
+  return product ? [[productId, product]] : [];
 }
 
-function toggleHubService() {
-  if (!simServiceWrap || !simProduct) return;
-  simServiceWrap.hidden = simProduct.value !== "hub";
+function getSimValues() {
+  const productId = simProduct?.value || "pix";
+  const entries = productEntries(productId);
+  const product =
+    productId === "all"
+      ? { name: "Todos os produtos" }
+      : ECOSYSTEM.products[productId];
+  const amount = Number(simAmount?.value) || 0;
+  const revenue = Number(simRevenue?.value) || 0;
+  const commission = Number(simCommission?.value) || 0;
+  const operation = simOperation?.selectedOptions[0]?.text || "Operação 01";
+  const net = Math.max(revenue - commission, 0);
+  const breakdown = entries.map(([id, item]) => {
+    const itemRevenue = amount * item.feeRate;
+    const itemCommission = itemRevenue * item.partnerShare;
+    return {
+      id,
+      name: item.name,
+      amount,
+      revenue: itemRevenue,
+      commission: itemCommission,
+      net: Math.max(itemRevenue - itemCommission, 0),
+    };
+  });
+  return { productId, product, amount, revenue, commission, operation, net, breakdown };
+}
+
+function applySuggestedRates() {
+  const amount = Number(simAmount?.value) || 0;
+  const entries = productEntries(simProduct?.value || "pix");
+  if (!entries.length || !simRevenue || !simCommission) return;
+  const totals = entries.reduce(
+    (acc, [, item]) => {
+      const revenue = amount * item.feeRate;
+      acc.revenue += revenue;
+      acc.commission += revenue * item.partnerShare;
+      return acc;
+    },
+    { revenue: 0, commission: 0 }
+  );
+  simRevenue.value = totals.revenue.toFixed(2);
+  simCommission.value = totals.commission.toFixed(2);
+}
+
+const PRODUCT_COLORS = {
+  pix: "#00a651",
+  tef: "#e87722",
+  system: "#1e4d8c",
+  hub: "#7a2d91",
+};
+
+function pct(part, total) {
+  if (!total) return "0,0%";
+  return `${((part / total) * 100).toFixed(1).replace(".", ",")}%`;
+}
+
+function donutSvg(slices) {
+  const total = slices.reduce((sum, slice) => sum + slice.value, 0) || 1;
+  const radius = 52;
+  const circ = 2 * Math.PI * radius;
+  let offset = 0;
+  const rings = slices
+    .map((slice) => {
+      const frac = slice.value / total;
+      const dash = Math.max(frac * circ, 0);
+      const circle = `<circle cx="70" cy="70" r="${radius}" fill="none" stroke="${slice.color}" stroke-width="16" stroke-dasharray="${dash} ${circ - dash}" stroke-dashoffset="${-offset}" transform="rotate(-90 70 70)"></circle>`;
+      offset += dash;
+      return circle;
+    })
+    .join("");
+  return `<svg class="dash-donut" viewBox="0 0 140 140" aria-hidden="true">
+    <circle cx="70" cy="70" r="52" fill="none" stroke="#e8eef4" stroke-width="16"></circle>
+    ${rings}
+    <text x="70" y="66" text-anchor="middle" font-size="11" fill="#5b6b7c">Líquido</text>
+    <text x="70" y="84" text-anchor="middle" font-size="14" font-weight="800" fill="#0b1f4d">${pct(slices[1]?.value || 0, total)}</text>
+  </svg>`;
+}
+
+function renderLiveReceipt(status) {
+  if (!simReceipt) return;
+  const { productId, product, amount, revenue, commission, operation, net, breakdown } = getSimValues();
+  const rows = breakdown.length ? breakdown : [
+    { id: productId, name: product.name, amount, revenue, commission, net },
+  ];
+  const maxRev = Math.max(...rows.map((row) => row.revenue), 1);
+  const takeRate = pct(revenue, amount);
+  const comRate = pct(commission, revenue);
+
+  simReceipt.innerHTML = `
+    <div class="dash-head">
+      <div>
+        <h3>${status || "Apuração em tempo real"}</h3>
+        <p>Clique em um produto no gráfico ou na tabela para filtrar. Destino: conta concentradora no MT Pagamentos.</p>
+      </div>
+      <div class="dash-badges">
+        <span class="dash-badge">${product.name}</span>
+        <span class="dash-badge">${operation}</span>
+      </div>
+    </div>
+    <div class="dash-kpis">
+      <article class="dash-kpi tx"><span>Valor da transação</span><strong>${money(amount)}</strong><small>Base da apuração</small></article>
+      <article class="dash-kpi rev"><span>Valor da receita</span><strong>${money(revenue)}</strong><small>Take rate ${takeRate}</small></article>
+      <article class="dash-kpi com"><span>Valor da comissão</span><strong>${money(commission)}</strong><small>${comRate} da receita</small></article>
+      <article class="dash-kpi net"><span>Receita líquida MT</span><strong>${money(net)}</strong><small>Após o split</small></article>
+    </div>
+    <div class="dash-charts">
+      <article class="dash-card">
+        <h4>Receita × comissão × líquido por produto</h4>
+        <div class="dash-legend">
+          <span><i style="background:var(--pix)"></i>Receita</span>
+          <span><i style="background:var(--tef)"></i>Comissão</span>
+          <span><i style="background:var(--system)"></i>Líquido</span>
+        </div>
+        <div class="dash-bar-chart">
+          ${rows
+            .map((row) => {
+              const wRev = (row.revenue / maxRev) * 100;
+              const wCom = (row.commission / maxRev) * 100;
+              const wNet = (row.net / maxRev) * 100;
+              return `<div class="dash-bar-row" data-filter-product="${row.id}">
+                <strong><i style="background:${PRODUCT_COLORS[row.id] || "#5b7c99"}"></i>${row.name}</strong>
+                <div>
+                  <div class="dash-bar-track" title="Receita ${money(row.revenue)}"><span style="width:${wRev}%;background:var(--pix)"></span></div>
+                  <div class="dash-bar-track" title="Comissão ${money(row.commission)}"><span style="width:${wCom}%;background:var(--tef)"></span></div>
+                  <div class="dash-bar-track" title="Líquido ${money(row.net)}"><span style="width:${wNet}%;background:var(--system)"></span></div>
+                </div>
+              </div>`;
+            })
+            .join("")}
+        </div>
+      </article>
+      <article class="dash-card">
+        <h4>Composição da receita</h4>
+        <div class="dash-donut-wrap">
+          ${donutSvg([
+            { value: commission, color: "#e87722" },
+            { value: net, color: "#1e4d8c" },
+          ])}
+          <ul class="dash-donut-list">
+            <li><span><b style="background:var(--tef)"></b>Comissão</span><span>${money(commission)}</span></li>
+            <li><span><b style="background:var(--system)"></b>Líquido MT</span><span>${money(net)}</span></li>
+            <li><span><b style="background:var(--pix)"></b>Receita total</span><span>${money(revenue)}</span></li>
+          </ul>
+        </div>
+      </article>
+    </div>
+    <table class="sim-breakdown">
+      <thead>
+        <tr><th>Produto</th><th>Transação</th><th>Receita</th><th>Comissão</th><th>Líquido</th></tr>
+      </thead>
+      <tbody>
+        ${rows
+          .map(
+            (row) =>
+              `<tr data-filter-product="${row.id}" class="${row.id === productId ? "is-on" : ""}">
+                <td>${row.name}</td>
+                <td>${money(row.amount)}</td>
+                <td>${money(row.revenue)}</td>
+                <td>${money(row.commission)}</td>
+                <td>${money(row.net)}</td>
+              </tr>`
+          )
+          .join("")}
+      </tbody>
+    </table>
+  `;
+
+  simReceipt.querySelectorAll("[data-filter-product]").forEach((el) => {
+    el.addEventListener("click", () => {
+      const id = el.getAttribute("data-filter-product");
+      if (!id || !simProduct || !ECOSYSTEM.products[id]) return;
+      simProduct.value = id;
+      applySuggestedRates();
+      renderLiveReceipt();
+      setActiveProduct(id);
+      openTab(id);
+    });
+  });
+}
+
+function csvCell(value) {
+  return `"${String(value).replace(/"/g, '""')}"`;
+}
+
+function exportSimFile() {
+  const { productId, product, amount, revenue, commission, operation, net, breakdown } = getSimValues();
+  const when = new Date().toLocaleString("pt-BR");
+  const brl = (value) => value.toFixed(2).replace(".", ",");
+  const rows =
+    productId === "all"
+      ? [
+          ["Produto", "Operação", "Valor da transação (R$)", "Valor da receita (R$)", "Valor da comissão (R$)", "Receita líquida (R$)", "Data e hora"],
+          ...breakdown.map((row) => [
+            row.name,
+            operation,
+            brl(row.amount),
+            brl(row.revenue),
+            brl(row.commission),
+            brl(row.net),
+            when,
+          ]),
+          ["Total — Todos os produtos", operation, brl(amount), brl(revenue), brl(commission), brl(net), when],
+        ]
+      : [
+          ["Campo", "Valor"],
+          ["Produto", product.name],
+          ["Operação", operation],
+          ["Valor da transação (R$)", brl(amount)],
+          ["Valor da receita (R$)", brl(revenue)],
+          ["Valor da comissão (R$)", brl(commission)],
+          ["Receita líquida na conta MT (R$)", brl(net)],
+          ["Destino da liquidação", "Conta concentradora no MT Pagamentos"],
+          ["Data e hora", when],
+        ];
+  const csv = `\uFEFF${rows.map((row) => row.map(csvCell).join(";")).join("\r\n")}`;
+  const blob = new Blob([csv], { type: "text/csv;charset=utf-8;" });
+  const link = document.createElement("a");
+  const stamp = new Date().toISOString().slice(0, 19).replace(/[:T]/g, "-");
+  const op = operation.replace(/\s+/g, "-").toLowerCase();
+  link.href = URL.createObjectURL(blob);
+  link.download = `simulacao-${op}-${stamp}.csv`;
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+  URL.revokeObjectURL(link.href);
+}
+
+function renderSimulatorOptions() {
+  if (!simProduct || !simOperation) return;
+  simProduct.innerHTML =
+    `<option value="all">Todos os produtos</option>` +
+    Object.entries(ECOSYSTEM.products)
+      .map(([id, product]) => `<option value="${id}">${product.name}</option>`)
+      .join("");
+  simOperation.innerHTML = Array.from({ length: 16 }, (_, index) => {
+    const n = String(index + 1).padStart(2, "0");
+    return `<option value="${index + 1}">Operação ${n}</option>`;
+  }).join("");
+  applySuggestedRates();
+  renderLiveReceipt();
 }
 
 function openTab(name) {
@@ -364,13 +597,14 @@ function setActiveProduct(name) {
   if (!stage) return;
   stage.dataset.active = name || "all";
   productCards.forEach((card) => {
-    card.classList.toggle("is-active", card.dataset.product === name);
+    const on = name === "all" || card.dataset.product === name;
+    card.classList.toggle("is-active", Boolean(name) && on);
   });
 }
 
 function drawSpokes() {
   const svg = document.querySelector(".eco-lines");
-  const hubEl = document.querySelector(".hub-inner");
+  const hubEl = document.querySelector(".hub-ring") || document.querySelector(".hub-inner");
   const spokes = {
     pix: document.querySelector(".spoke-pix"),
     tef: document.querySelector(".spoke-tef"),
@@ -384,15 +618,22 @@ function drawSpokes() {
   const hubRect = hubEl.getBoundingClientRect();
   const hubX = hubRect.left - stageRect.left + hubRect.width / 2;
   const hubY = hubRect.top - stageRect.top + hubRect.height / 2;
+  const hubR = Math.min(hubRect.width, hubRect.height) / 2;
 
   productCards.forEach((card) => {
     const line = spokes[card.dataset.product];
     if (!line) return;
     const rect = card.getBoundingClientRect();
-    line.setAttribute("x1", String(rect.left - stageRect.left + rect.width / 2));
-    line.setAttribute("y1", String(rect.top - stageRect.top + rect.height / 2));
-    line.setAttribute("x2", String(hubX));
-    line.setAttribute("y2", String(hubY));
+    const x1 = rect.left - stageRect.left + rect.width / 2;
+    const y1 = rect.top - stageRect.top + rect.height / 2;
+    const dx = hubX - x1;
+    const dy = hubY - y1;
+    const len = Math.hypot(dx, dy) || 1;
+    const cardInset = Math.min(rect.width, rect.height) * 0.42;
+    line.setAttribute("x1", String(x1 + (dx / len) * cardInset));
+    line.setAttribute("y1", String(y1 + (dy / len) * cardInset));
+    line.setAttribute("x2", String(hubX - (dx / len) * hubR));
+    line.setAttribute("y2", String(hubY - (dy / len) * hubR));
   });
 }
 
@@ -441,49 +682,33 @@ function markSimStep(n, state) {
 
 function simulate(event) {
   event.preventDefault();
-  const productId = simProduct.value;
-  const product = ECOSYSTEM.products[productId];
-  const amount = Number(simAmount.value) || 0;
-  const service = productId === "hub" ? ECOSYSTEM.hubServices[simService.value] : null;
-  const fee = amount * product.feeRate;
-  const partner = fee * product.partnerShare;
-  const net = fee - partner;
+  const { productId, product, amount, revenue, commission, operation, net } = getSimValues();
 
   simTrack?.querySelectorAll("li").forEach((item) => item.classList.remove("is-on", "is-done"));
   setActiveProduct(productId);
-  openTab(productId);
+  if (productId !== "all") openTab(productId);
 
   const labels = [
-    `Captura da transação ${product.name}${service ? ` · ${service.name}` : ""}`,
-    "Apuração por produto, cliente, canal e estabelecimento",
-    `Cálculo da tarifa de ${money(fee)}`,
-    `Distribuição: ${money(partner)} ao parceiro e ${money(net)} para a central`,
-    "Registro no relatório e liquidação na conta concentradora do MT",
+    `Captura da transação ${product.name} na ${operation}`,
+    `Apuração por produto, operação, canal e estabelecimento`,
+    `Cálculo da receita de ${money(revenue)} sobre ${money(amount)}`,
+    `Distribuição da comissão de ${money(commission)} e líquido de ${money(net)}`,
+    `Relatório da ${operation} e liquidação na conta concentradora do MT`,
   ];
 
   let step = 1;
   markSimStep(step, "on");
-  simReceipt.innerHTML = `<p>Processando ${labels[0]}...</p>`;
+  renderLiveReceipt(`Processando: ${labels[0]}`);
 
   const timer = window.setInterval(() => {
     step += 1;
     if (step <= 5) {
       markSimStep(step, "on");
-      simReceipt.innerHTML = `<p>Processando ${labels[step - 1]}...</p>`;
+      renderLiveReceipt(`Processando: ${labels[step - 1]}`);
     } else {
       window.clearInterval(timer);
       markSimStep(5, "done");
-      simReceipt.innerHTML = `
-        <h3>Recibo ilustrativo da apuração</h3>
-        <dl>
-          <dt>Produto</dt><dd>${product.name}${service ? ` · ${service.name}` : ""}</dd>
-          <dt>Valor da transação</dt><dd>${money(amount)}</dd>
-          <dt>Tarifa (${(product.feeRate * 100).toFixed(2)}%)</dt><dd>${money(fee)}</dd>
-          <dt>Comissão do parceiro</dt><dd>${money(partner)}</dd>
-          <dt>Receita líquida na conta MT</dt><dd>${money(net)}</dd>
-          <dt>Destino da liquidação</dt><dd>Conta concentradora no MT Pagamentos</dd>
-        </dl>
-      `;
+      renderLiveReceipt("Apuração concluída");
     }
   }, 650);
 }
@@ -518,7 +743,7 @@ function initHubServices() {
       document.querySelectorAll("#hub-service-list li").forEach((el) => el.classList.remove("is-active"));
       item.classList.add("is-active");
       inspectorContent.innerHTML = `
-        <p class="tag hub">HUB — soluções para Estabelecimento Comercial (EC)</p>
+        <p class="tag hub">Confra HUB — soluções para Estabelecimento Comercial (EC)</p>
         <h2 id="inspector-title">${service.name}</h2>
         <p>${service.text}</p>
         <p>A transação segue o mecanismo único: captura, apuração, cálculo de comissão, distribuição e relatório, com liquidação na conta concentradora do MT.</p>
@@ -531,15 +756,26 @@ function initHubServices() {
 }
 
 function initNav() {
-  toggle?.addEventListener("click", () => {
+  const closeNav = () => {
+    document.body.classList.remove("nav-open");
+    toggle?.setAttribute("aria-expanded", "false");
+  };
+
+  toggle?.addEventListener("click", (event) => {
+    event.stopPropagation();
     const open = document.body.classList.toggle("nav-open");
     toggle.setAttribute("aria-expanded", String(open));
   });
   document.querySelectorAll(".nav a").forEach((link) => {
-    link.addEventListener("click", () => {
-      document.body.classList.remove("nav-open");
-      toggle?.setAttribute("aria-expanded", "false");
-    });
+    link.addEventListener("click", closeNav);
+  });
+  document.addEventListener("click", (event) => {
+    if (!document.body.classList.contains("nav-open")) return;
+    if (event.target.closest(".nav, .nav-toggle")) return;
+    closeNav();
+  });
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 760) closeNav();
   });
 
   const links = document.querySelectorAll(".nav a");
@@ -576,8 +812,21 @@ document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") closeInspector();
 });
 document.querySelector("#play-pipeline")?.addEventListener("click", playPipeline);
-simProduct?.addEventListener("change", toggleHubService);
+simProduct?.addEventListener("change", () => {
+  applySuggestedRates();
+  renderLiveReceipt();
+  setActiveProduct(simProduct.value);
+  if (simProduct.value !== "all") openTab(simProduct.value);
+});
+simAmount?.addEventListener("input", () => {
+  applySuggestedRates();
+  renderLiveReceipt();
+});
+simRevenue?.addEventListener("input", () => renderLiveReceipt());
+simCommission?.addEventListener("input", () => renderLiveReceipt());
+simOperation?.addEventListener("change", () => renderLiveReceipt());
 document.querySelector("#sim-form")?.addEventListener("submit", simulate);
+document.querySelector("#sim-export")?.addEventListener("click", exportSimFile);
 window.addEventListener("resize", drawSpokes);
 window.addEventListener("load", drawSpokes);
 drawSpokes();
