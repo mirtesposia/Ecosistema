@@ -326,7 +326,13 @@ function renderStaticBlocks() {
 
   if (simTrack) {
     simTrack.innerHTML = ECOSYSTEM.pipeline
-      .map((step) => `<li data-step="${step.n}"><strong>${step.n}. ${step.name}</strong><br>${step.text}</li>`)
+      .map(
+        (step) => `<li data-step="${step.n}">
+          <span class="sim-step-n">${step.n}</span>
+          <strong>${step.name}</strong>
+          <p>${step.text}</p>
+        </li>`
+      )
       .join("");
   }
 }

@@ -1252,6 +1252,35 @@ a {
   color: var(--white);
 }
 
+.sim-flow {
+  background: #eef2f6;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 16px;
+  box-shadow: var(--shadow);
+}
+
+.sim-flow-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+
+.sim-flow-head h4 {
+  margin: 0;
+  color: var(--navy);
+  font-size: 1.05rem;
+}
+
+.sim-flow-head p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
 .sim-track {
   list-style: none;
   margin: 0;
@@ -1259,27 +1288,60 @@ a {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 10px;
+  position: relative;
 }
 
 .sim-track li {
   background: var(--white);
   border: 1px solid var(--line);
-  border-radius: 14px;
-  padding: 12px;
-  font-size: 0.86rem;
+  border-radius: 12px;
+  padding: 14px 12px 12px;
+  font-size: 0.78rem;
   color: var(--muted);
+  line-height: 1.4;
+  box-shadow: 0 6px 18px rgba(11, 31, 77, 0.06);
+}
+
+.sim-track li strong {
+  display: block;
+  margin: 8px 0 6px;
+  color: var(--navy);
+  font-size: 0.88rem;
+}
+
+.sim-track li p {
+  margin: 0;
+  font-weight: 500;
+}
+
+.sim-step-n {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--navy);
+  color: var(--white);
+  font-size: 0.78rem;
+  font-weight: 800;
 }
 
 .sim-track li.is-on {
   border-color: var(--pix);
   background: var(--pix-soft);
   color: var(--navy);
-  font-weight: 700;
+}
+
+.sim-track li.is-on .sim-step-n {
+  background: var(--pix);
 }
 
 .sim-track li.is-done {
   border-color: var(--mt);
-  color: var(--navy);
+}
+
+.sim-track li.is-done .sim-step-n {
+  background: var(--mt);
 }
 
 .sim-receipt {
@@ -1754,8 +1816,20 @@ a {
     grid-column: 1 / -1;
   }
 
+  .sim-track {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 6px;
+    -webkit-overflow-scrolling: touch;
+  }
+
   .sim-track li {
     font-size: 0.8rem;
+    min-width: 220px;
+    flex: 0 0 220px;
+    scroll-snap-align: start;
   }
 
   .dash-kpi strong {
