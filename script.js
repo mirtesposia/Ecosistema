@@ -9,12 +9,12 @@ const ECOSYSTEM = {
       summary:
         "Soluções completas para recebimentos e pagamentos instantâneos com segurança, agilidade e alta disponibilidade.",
       detail:
-        "Toda transação Confra PIX é capturada em tempo real e encaminhada à central de conciliação para classificação, apuração e liquidação na conta concentradora do MT.",
+        "O Confra PIX Online tem estrutura e CNPJ próprios. A margem (custo do fornecedor versus venda à operação) permanece na conta do produto e liquida na conta concentradora do MT.",
       checks: [
         "QR Code, chave PIX, API e PDV",
-        "Liquidação na conta concentradora",
-        "Rastreio por cliente, canal e estabelecimento",
-        "Receita: tarifa sobre envio e recebimento",
+        "Spread PIX: custo Celcoin (R$ 0,29) × venda às operações (R$ 0,89)",
+        "Wiki e ConfraBase: processamento cobrado por volume, via boleto a Capta, IPAG e MTBank",
+        "Pulse: cobrança de tarifa de 10% na central de tarifa; Smart na central de cobrança",
       ],
       flow: [
         "Cliente inicia Confra PIX de recebimento ou envio",
@@ -22,9 +22,9 @@ const ECOSYSTEM = {
         "Evento chega à captura da central",
         "Receita creditada na conta MT",
       ],
-      revenue: "Tarifa sobre transações de recebimento e envio.",
+      revenue: "Spread PIX (custo do fornecedor × venda à operação) e processamento Wiki/ConfraBase.",
       feeRate: 0.0099,
-      partnerShare: 0.4,
+      partnerShare: 0.3,
     },
     tef: {
       name: "Confra TEF",
@@ -33,12 +33,12 @@ const ECOSYSTEM = {
       summary:
         "Soluções de pagamento integrado para o ponto de venda físico e digital com confiabilidade e eficiência.",
       detail:
-        "A venda no PDV ou pinpad é autorizada, entra na apuração Confra TEF e a receita correspondente é liquidada na conta MT.",
+        "A venda no PDV ou pinpad é autorizada e entra na apuração Confra TEF. A retenção de 0,15% vem embutida nos acertos de Capta e IPAG e precisa ir para a conta do Confra TEF.",
       checks: [
         "PDV físico, pinpad e canais digitais",
-        "Multiadquirência e conciliação por estabelecimento",
-        "Captura automática de cada venda",
-        "Receita: tarifa sobre transações no PDV",
+        "Retenção de 0,15% por transação TEF",
+        "Valor embutido nos acertos de Capta e IPAG — conciliar e levar à conta Confra TEF",
+        "Evitar pagamento em duplicidade aos licenciados",
       ],
       flow: [
         "Venda no PDV ou pinpad",
@@ -46,9 +46,9 @@ const ECOSYSTEM = {
         "Transação entra na apuração Confra TEF",
         "Receita liquidada na conta MT",
       ],
-      revenue: "Tarifa sobre transações de pagamento no ponto de venda.",
+      revenue: "Retenção de 0,15% por transação TEF, conciliada a partir de Capta e IPAG.",
       feeRate: 0.018,
-      partnerShare: 0.45,
+      partnerShare: 0.3,
     },
     system: {
       name: "Confra SYSTEM",
@@ -57,12 +57,12 @@ const ECOSYSTEM = {
       summary:
         "Plataforma tecnológica e APIs robustas para integração, automação e gestão completa das operações.",
       detail:
-        "Portal, APIs e backoffice registram o uso da plataforma. Mensalidades e serviços entram na apuração Confra SYSTEM e liquidam na conta MT.",
+        "O Confra SYSTEM tem CNPJ próprio. Portal, APIs e backoffice registram o uso; cada módulo tem subconta, com espaço para novos contratos.",
       checks: [
-        "APIs de integração, automação e backoffice",
-        "Gestão de operações, usuários e regras",
-        "Eventos de uso viram transações apuráveis",
-        "Receita: mensalidade de plataforma e serviços",
+        "Subcontas: Confra PDV, Confra Cobrança, Confra Emissor de Boleto e Geren Pix",
+        "CNPJ próprio, com inclusão de futuros contratos",
+        "Mensalidades, taxas e valor fixo por produto",
+        "API do conciliador confronta custos com a central de custos",
       ],
       flow: [
         "Operação usa portal, API ou PDV",
@@ -70,7 +70,7 @@ const ECOSYSTEM = {
         "Uso entra na apuração Confra SYSTEM",
         "Mensalidades e taxas na conta MT",
       ],
-      revenue: "Mensalidade de uso da plataforma e serviços.",
+      revenue: "Mensalidades e serviços dos módulos PDV, cobrança, emissor de boleto e Geren Pix.",
       feeRate: 0.05,
       partnerShare: 0.3,
     },
@@ -81,12 +81,12 @@ const ECOSYSTEM = {
       summary:
         "Soluções inteligentes",
       detail:
-        "Cada serviço do Confra HUB gera transação, tarifa e comissão no mesmo mecanismo de apuração, com liquidação na conta MT.",
+        "Cada unidade do Confra HUB tem subconta própria. A receita do fornecedor entra, é apurada e o HUB repassa às operações, conciliando o recebido com a comissão da rede licenciada.",
       checks: [
-        "Cinco famílias de solução no mesmo hub",
-        "Foco em economia, regularização e sustentabilidade",
-        "Comissionamento por serviço e parceiro",
-        "Receita: taxa sobre serviços ao Estabelecimento Comercial (EC)",
+        "Confra Cred (Confrac / Credit César), Confra Energia, débitos veiculares e certificação digital",
+        "Débitos veiculares: convênio Parcele na Hora · Certificado: Cert Sign",
+        "Custo da operação (ex.: certificado digital) entra na apuração e é conciliado via API",
+        "Repasse do HUB para as operações via subconta na conta MT",
       ],
       flow: [
         "Estabelecimento Comercial (EC) contrata o serviço do Confra HUB",
@@ -96,13 +96,17 @@ const ECOSYSTEM = {
       ],
       revenue: "Taxa pelos serviços e soluções para Estabelecimento Comercial (EC).",
       feeRate: 0.08,
-      partnerShare: 0.5,
+      partnerShare: 0.3,
     },
   },
   hubServices: {
+    cred: {
+      name: "Confra Cred",
+      text: "Subconta Confrac: comissões da Credit César. O custo da operação, a tarifa e o split 70/30 (rede × operação) entram na mesma apuração.",
+    },
     veicular: {
       name: "Débitos veiculares",
-      text: "Regularização de IPVA, licenciamento e débitos do veículo em um fluxo único, com tarifa e comissão apuradas no Confra HUB.",
+      text: "Convênio Parcele na Hora. Regularização de IPVA, licenciamento e débitos do veículo, com tarifa e comissão apuradas no Confra HUB.",
     },
     tributos: {
       name: "Parcelamento de tributos",
@@ -114,11 +118,11 @@ const ECOSYSTEM = {
     },
     certificado: {
       name: "Certificado digital",
-      text: "Emissão de certificado digital com rastreio da transação até a liquidação na conta concentradora.",
+      text: "Emissão via Cert Sign. A taxa contratada é conciliada com a produção via API até a liquidação na conta concentradora.",
     },
     energia: {
-      name: "Energia sustentável",
-      text: "Portabilidade de energia com economia e sustentabilidade, liquidada e comissionada no mesmo mecanismo.",
+      name: "Confra Energia",
+      text: "Subconta Confraenergia. Portabilidade de energia com economia e sustentabilidade; o fechamento concilia a receita recebida com o custo acordado.",
     },
   },
   pipeline: [
@@ -159,8 +163,8 @@ const ECOSYSTEM = {
       text: "Cada transação é classificada em múltiplos eixos para garantir rastreabilidade e conferência.",
       items: [
         "Produto de origem (Confra PIX, Confra TEF, Confra SYSTEM, Confra HUB)",
-        "Operação cliente e estabelecimento",
-        "Canal (PDV, API, app, portal)",
+        "CNPJ e subconta da unidade de negócio, na conta Confrapagmtos",
+        "Operação, licenciado e estabelecimento",
         "Data de captura, liquidação e competência",
       ],
     },
@@ -168,20 +172,20 @@ const ECOSYSTEM = {
       title: "Regras de comissionamento",
       text: "O motor aplica a tabela contratual sem intervenção manual, com trilha de auditoria.",
       items: [
-        "Percentual ou valor fixo por produto",
-        "Faixas de volume e metas da operação",
-        `Split entre ${LOGO}, parceiro e canal`,
-        "Exceções e vigência por contrato",
+        "Custo só entra se estiver em contrato ou aditivo",
+        "Split de lucro 70% rede e 30% operação",
+        "Pulse cobra tarifas na subconta; Confra TEF retém 0,15% por transação",
+        "Log de cada alteração para o fechamento auditável",
       ],
     },
     {
       title: "Governança da conta MT",
-      text: "A conta concentradora no MT Pagamentos é o ponto único de liquidez do ecossistema.",
+      text: "A conta concentradora (Confrapagmtos) no MT Pagamentos é o ponto único de liquidez, com subcontas por produto.",
       items: [
-        "100% das receitas liquidam nesta conta",
-        "Repasses saem após a apuração",
-        "Saldo, conciliação e extrato auditáveis",
-        "Controle centralizado para as 16 operações",
+        "Receita do fornecedor entra, é apurada e repassada às operações",
+        "Central de custos concilia contrato × produção via API",
+        "Controladoria identifica divergência e aciona o jurídico",
+        "Fechamentos (ex.: energia) conciliam receita recebida e custo acordado",
       ],
     },
   ],
@@ -189,7 +193,7 @@ const ECOSYSTEM = {
     { n: "Camada 1", title: "Origem", text: "Estabelecimentos Comerciais (EC) e usuários finais geram transações nos canais Confra PIX, Confra TEF, Confra SYSTEM e Confra HUB." },
     { n: "Camada 2", title: "Produtos", text: "Cada produto processa, autoriza e registra o evento, mantendo a especialização da ponta." },
     { n: "Camada 3", title: `Central ${LOGO}`, text: "Conciliação, classificação, regras de comissão e visão única das 16 operações." },
-    { n: "Camada 4", title: "Conta MT", text: "Liquidação financeira concentrada. Único ponto de entrada de receita do ecossistema." },
+    { n: "Camada 4", title: "Conta MT", text: "Liquidação na conta Confrapagmtos, com CNPJ e subconta por produto. Único ponto de entrada de receita do ecossistema." },
     { n: "Camada 5", title: "Distribuição", text: "Repasses a parceiros, extratos, dashboards e trilha de auditoria para gestão e compliance." },
   ],
   benefits: [
@@ -198,6 +202,111 @@ const ECOSYSTEM = {
     { title: "Visão completa", text: "Desempenho por produto, cliente e canal, com gestão consolidada do negócio.", icon: '<svg viewBox="0 0 48 48"><path d="M8 36V20h8v16H8Zm12 0V12h8v24h-8Zm12 0V24h8v12h-8Z"/></svg>' },
     { title: "Transparência", text: "Mais confiança para clientes e parceiros, com regras e extratos rastreáveis.", icon: '<svg viewBox="0 0 48 48"><circle cx="18" cy="16" r="6"/><circle cx="30" cy="16" r="6"/><path d="M8 36c1-6 5-10 10-10s9 4 10 10M22 36c1-6 5-10 10-10s9 4 10 10"/></svg>' },
     { title: "Competitividade", text: "Soluções que geram economia, sustentabilidade e diferencial para o Estabelecimento Comercial (EC).", icon: '<svg viewBox="0 0 48 48"><path d="M10 36c10-2 16-10 20-24 5 8 7 15 6 24-8-2-16 0-26 0Z"/></svg>' },
+  ],
+  tech: [
+    {
+      kicker: "1ª etapa",
+      title: "Central de custos auditável",
+      text: "A central de custos concilia os valores de contrato (ex.: taxa de certificado digital) com a produção via API. Só entra custo documentado em contrato ou aditivo. A controladoria aponta divergência e aciona o jurídico.",
+      items: [
+        "Custo combinado travado com o fornecedor",
+        "Conciliação automática: contrato × produção via API",
+        "Log de cada alteração no sistema",
+        "Lucro = venda − compra − custo · split 70% rede × 30% operação",
+      ],
+    },
+    {
+      kicker: "2ª etapa",
+      title: "Conta MT, CNPJs e subcontas",
+      text: "Na conta Confrapagmtos, cada produto se vincula a um CNPJ e a subcontas. A receita do fornecedor entra, é apurada e o repasse segue para as operações de forma clara e conciliada.",
+      items: [
+        "Uma conta concentradora + subcontas por unidade de negócio",
+        "Receita do fornecedor → apuração → repasse às operações",
+        "Pulse: cobrança de tarifa (10% na central de tarifa)",
+        "Smart: tarifa na central de cobrança",
+      ],
+    },
+    {
+      kicker: "Confra HUB",
+      title: "Subcontas por unidade",
+      text: "Cada linha do HUB tem subconta para conciliar o recebido com a comissão paga à rede licenciada.",
+      items: [
+        "Confra Cred — Confrac / comissões Credit César",
+        "Confra Energia — subconta Confraenergia",
+        "Débitos veiculares — convênio Parcele na Hora",
+        "Certificação digital — Cert Sign",
+      ],
+    },
+    {
+      kicker: "Confra SYSTEM",
+      title: "CNPJ próprio e módulos",
+      text: "O Confra SYSTEM opera com CNPJ próprio. Cada produto tem subconta, com espaço para novos contratos.",
+      items: [
+        "Confra PDV",
+        "Confra Cobrança",
+        "Confra Emissor de Boleto",
+        "Geren Pix",
+      ],
+    },
+    {
+      kicker: "Confra TEF",
+      title: "Retenção 0,15% e conciliação",
+      text: "A retenção de 0,15% por transação TEF vem embutida nos acertos de Capta e IPAG. O valor precisa ir para a conta do Confra TEF, senão o licenciado recebe em duplicidade.",
+      items: [
+        "Retenção de 0,15% por transação TEF",
+        "Origem: acertos Capta e IPAG",
+        "Repasse obrigatório para a conta Confra TEF",
+        "Conciliação para evitar pagamento duplicado",
+      ],
+    },
+    {
+      kicker: "Confra PIX Online",
+      title: "Spread, CNPJ e processamento",
+      text: "O Confra PIX Online tem estrutura própria, com outros sócios e CNPJ específico. A margem permanece na conta do produto. Wiki e ConfraBase consolidam a receita de processamento.",
+      items: [
+        "CNPJ e estrutura próprios",
+        "Custo Celcoin: R$ 0,29 por PIX · venda às operações: R$ 0,89",
+        "Wiki e ConfraBase: cobrança por volume processado",
+        "Boleto de cobrança a Capta, IPAG e MTBank",
+      ],
+    },
+    {
+      kicker: "Confrapag",
+      title: "Shopping, universidade e eventos",
+      text: "Linhas complementares de receita, apuradas na mesma conta concentradora quando a venda ocorre na base.",
+      items: [
+        "Confra Shopping: marketplace com retenção percentual nas vendas entre clientes da base",
+        "Universidade Confrapag: subconta para receita de cursos",
+        "Eventos: convenções regionais e Paulo Por Aí",
+      ],
+    },
+    {
+      kicker: "Repasses",
+      title: "Rede × Operação",
+      text: "O lucro apurado (venda − compra − custo) é distribuído automaticamente após a conciliação na conta MT.",
+      items: [
+        "70% rede licenciada",
+        "30% operação",
+        "Conciliação entre valor recebido e comissão paga",
+      ],
+    },
+  ],
+  extraRevenue: [
+    {
+      id: "pix",
+      name: "Wiki e ConfraBase",
+      revenue: "Processamento por volume de transações, cobrado via boleto de Capta, IPAG e MTBank.",
+    },
+    {
+      id: "hub",
+      name: "Confra Shopping",
+      revenue: "Marketplace: retenção percentual sobre vendas entre clientes da base.",
+    },
+    {
+      id: "system",
+      name: "Universidade Confrapag",
+      revenue: "Subconta própria para a receita de cursos vendidos.",
+    },
   ],
 };
 
@@ -315,13 +424,31 @@ function renderStaticBlocks() {
       .join("");
   }
 
-  if (revenueBody) {
-    revenueBody.innerHTML = Object.entries(ECOSYSTEM.products)
+  const techGrid = document.querySelector("#tech-grid");
+  if (techGrid) {
+    techGrid.innerHTML = ECOSYSTEM.tech
       .map(
-        ([id, product]) =>
-          `<tr><td><span class="pill ${id}">${product.name}</span></td><td>${product.revenue}</td></tr>`
+        (block) => `
+        <article class="tech-card">
+          <span>${block.kicker}</span>
+          <h3>${block.title}</h3>
+          <p>${block.text}</p>
+          <ul>${block.items.map((item) => `<li>${item}</li>`).join("")}</ul>
+        </article>`
       )
       .join("");
+  }
+
+  if (revenueBody) {
+    const productRows = Object.entries(ECOSYSTEM.products).map(
+      ([id, product]) =>
+        `<tr><td><span class="pill ${id}">${product.name}</span></td><td>${product.revenue}</td></tr>`
+    );
+    const extraRows = (ECOSYSTEM.extraRevenue || []).map(
+      (item) =>
+        `<tr><td><span class="pill ${item.id}">${item.name}</span></td><td>${item.revenue}</td></tr>`
+    );
+    revenueBody.innerHTML = [...productRows, ...extraRows].join("");
   }
 
   if (simTrack) {
@@ -445,8 +572,8 @@ function renderLiveReceipt(status) {
     <div class="dash-kpis">
       <article class="dash-kpi tx"><span>Valor da transação</span><strong>${money(amount)}</strong><small>Base da apuração</small></article>
       <article class="dash-kpi rev"><span>Valor da receita</span><strong>${money(revenue)}</strong><small>Take rate ${takeRate}</small></article>
-      <article class="dash-kpi com"><span>Valor da comissão</span><strong>${money(commission)}</strong><small>${comRate} da receita</small></article>
-      <article class="dash-kpi net"><span>Receita líquida MT</span><strong>${money(net)}</strong><small>Após o split</small></article>
+      <article class="dash-kpi com"><span>Repasse operação 30%</span><strong>${money(commission)}</strong><small>${comRate} da receita (lucro da operação)</small></article>
+      <article class="dash-kpi net"><span>Repasse rede 70%</span><strong>${money(net)}</strong><small>Após venda − compra − custo</small></article>
     </div>
     <div class="dash-charts">
       <article class="dash-card">
