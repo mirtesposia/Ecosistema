@@ -260,12 +260,12 @@ a {
 }
 
 .cost-board-title {
-  margin: 0 0 14px;
+  margin: 0 0 16px;
   color: var(--navy);
   font-weight: 800;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  font-size: 0.78rem;
+  font-size: 1.05rem;
 }
 
 .cost-cards {
@@ -281,27 +281,33 @@ a {
   background: var(--white);
   border: 1px solid var(--line);
   border-radius: 18px;
-  padding: 18px 16px;
+  padding: 22px 16px;
   box-shadow: 0 8px 24px rgba(11, 31, 77, 0.05);
-  text-align: left;
+  text-align: center;
 }
 
 .cost-cards strong {
   display: block;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
   color: var(--navy);
-  font-size: 1.05rem;
+  font-size: 1.28rem;
   line-height: 1.25;
+  text-transform: none;
 }
 
-.cost-cards span {
+.cost-cards strong .cost-title-upper {
+  text-transform: uppercase;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+}
+
+.cost-cards > li > span {
   color: var(--muted);
-  font-size: 0.86rem;
+  font-size: 0.95rem;
   line-height: 1.4;
-}
-
-.cost-card-wide {
-  grid-column: 1 / -1;
+  font-weight: 500;
+  text-transform: none;
 }
 
 .section {
