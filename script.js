@@ -213,7 +213,7 @@ const ECOSYSTEM = {
         "Contrato com os fornecedores F3, F4, F5, F6 e F7",
         "Controladoria e jurídico na trava da negociação",
         "Central de custos com informações auditáveis",
-        "TECNOLOGIA — Conciliador por API: lançamento e conferência",
+        "Conciliador por API: contrato × custos no fechamento mensal",
       ],
     },
     {
