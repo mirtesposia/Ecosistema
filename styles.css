@@ -292,10 +292,17 @@ a {
   color: var(--navy);
   font-size: 1.28rem;
   line-height: 1.25;
-  text-transform: uppercase !important;
+  text-transform: none;
 }
 
-.cost-cards span {
+.cost-cards strong .cost-title-upper {
+  text-transform: uppercase;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+}
+
+.cost-cards > li > span {
   color: var(--muted);
   font-size: 1rem;
   line-height: 1.4;
