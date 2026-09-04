@@ -9,12 +9,13 @@ const ECOSYSTEM = {
       summary:
         "Soluções completas para recebimentos e pagamentos instantâneos com segurança, agilidade e alta disponibilidade.",
       detail:
-        "O Confra PIX Online tem estrutura e CNPJ próprios. A margem (custo do fornecedor versus venda à operação) permanece na conta do produto e liquida na conta concentradora do MT.",
+        "Toda transação Confra PIX é capturada em tempo real e encaminhada à central de conciliação para classificação, apuração e liquidação na conta concentradora do MT.",
       checks: [
         "QR Code, chave PIX, API e PDV",
-        "Spread PIX: custo Celcoin (R$ 0,29) × venda às operações (R$ 0,89)",
-        "Wiki e ConfraBase: processamento cobrado por volume, via boleto a Capta, IPAG e MTBank",
-        "Pulse: cobrança de tarifa de 10% na central de tarifa; Smart na central de cobrança",
+        "Spread PIX: custo do fornecedor versus venda à operação",
+        "Liquidação na conta concentradora",
+        "Rastreio por cliente, canal e estabelecimento",
+        "Receita: tarifa sobre envio e recebimento",
       ],
       flow: [
         "Cliente inicia Confra PIX de recebimento ou envio",
@@ -22,7 +23,7 @@ const ECOSYSTEM = {
         "Evento chega à captura da central",
         "Receita creditada na conta MT",
       ],
-      revenue: "Spread PIX (custo do fornecedor × venda à operação) e processamento Wiki/ConfraBase.",
+      revenue: "Spread PIX e tarifa sobre envio e recebimento.",
       feeRate: 0.0099,
       partnerShare: 0.3,
     },
@@ -33,12 +34,12 @@ const ECOSYSTEM = {
       summary:
         "Soluções de pagamento integrado para o ponto de venda físico e digital com confiabilidade e eficiência.",
       detail:
-        "A venda no PDV ou pinpad é autorizada e entra na apuração Confra TEF. A retenção de 0,15% vem embutida nos acertos de Capta e IPAG e precisa ir para a conta do Confra TEF.",
+        "A venda no PDV ou pinpad é autorizada, entra na apuração Confra TEF e a receita correspondente é liquidada na conta MT.",
       checks: [
         "PDV físico, pinpad e canais digitais",
         "Retenção de 0,15% por transação TEF",
-        "Valor embutido nos acertos de Capta e IPAG — conciliar e levar à conta Confra TEF",
-        "Evitar pagamento em duplicidade aos licenciados",
+        "Captura automática de cada venda",
+        "Receita: tarifa sobre transações no PDV",
       ],
       flow: [
         "Venda no PDV ou pinpad",
@@ -46,7 +47,7 @@ const ECOSYSTEM = {
         "Transação entra na apuração Confra TEF",
         "Receita liquidada na conta MT",
       ],
-      revenue: "Retenção de 0,15% por transação TEF, conciliada a partir de Capta e IPAG.",
+      revenue: "Retenção de 0,15% por transação TEF, liquidada na conta MT.",
       feeRate: 0.018,
       partnerShare: 0.3,
     },
@@ -209,10 +210,10 @@ const ECOSYSTEM = {
       title: "Central de custos auditável",
       text: "A central de custos concilia os valores de contrato (ex.: taxa de certificado digital) com a produção via API. Só entra custo documentado em contrato ou aditivo. A controladoria aponta divergência e aciona o jurídico.",
       items: [
-        "Custo combinado travado com o fornecedor",
-        "Conciliação automática: contrato × produção via API",
-        "Log de cada alteração no sistema",
-        "Lucro = venda − compra − custo · split 70% rede × 30% operação",
+        "Contrato com os fornecedores F3, F4, F5, F6 e F7",
+        "Controladoria e jurídico na trava da negociação",
+        "Central de custos com informações auditáveis",
+        "Conciliador por API: contrato × custos no fechamento mensal",
       ],
     },
     {
@@ -220,7 +221,7 @@ const ECOSYSTEM = {
       title: "Conta MT, CNPJs e subcontas",
       text: "Na conta Confrapagmtos, cada produto se vincula a um CNPJ e a subcontas. A receita do fornecedor entra, é apurada e o repasse segue para as operações de forma clara e conciliada.",
       items: [
-        "Uma conta concentradora + subcontas por unidade de negócio",
+        "Uma conta concentradora + CNPJ e subcontas por produto",
         "Receita do fornecedor → apuração → repasse às operações",
         "Pulse: cobrança de tarifa (10% na central de tarifa)",
         "Smart: tarifa na central de cobrança",
