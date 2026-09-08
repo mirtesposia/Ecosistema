@@ -638,7 +638,7 @@ a {
 
 .mt-box {
   width: 100%;
-  max-width: 260px;
+  max-width: 280px;
   background: var(--white);
   color: var(--navy);
   border-radius: 14px;
@@ -699,22 +699,24 @@ a {
 
 .mt-subs {
   list-style: none;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 6px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
   margin: 0;
   padding: 0;
 }
 
 .mt-subs li {
   margin: 0;
-  padding: 5px 6px;
+  padding: 5px 8px;
   border-radius: 999px;
   background: var(--paper);
   color: var(--navy);
-  font-size: 0.62rem;
+  font-size: 0.58rem;
   font-weight: 700;
   line-height: 1.2;
+  white-space: nowrap;
 }
 
 .mt-note {
