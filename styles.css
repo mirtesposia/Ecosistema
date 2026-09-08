@@ -387,7 +387,7 @@ a {
   grid-template-areas:
     "pix pix hub hub tef tef"
     "system system hub hub hubprod hubprod"
-    "wiki wiki wiki shopping shopping shopping"
+    "wiki wiki . . shopping shopping"
     "uni uni eventos eventos clients clients";
   gap: 18px 22px;
   align-items: stretch;
