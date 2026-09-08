@@ -53,7 +53,7 @@ const ECOSYSTEM = {
     system: {
       name: "Confra SYSTEM",
       tag: "Plataforma, APIs e gestão",
-      title: "Confra SYSTEM — a espinha dorsal tecnológica",
+      title: "Confra SYSTEM",
       summary:
         "Plataforma tecnológica e APIs robustas para integração, automação e gestão completa das operações.",
       detail:
