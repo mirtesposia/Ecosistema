@@ -36,7 +36,7 @@ const ECOSYSTEM = {
         "A venda no PDV ou pinpad é autorizada, entra na apuração Confra TEF e a receita correspondente é liquidada na conta MT.",
       checks: [
         "PDV físico, pinpad e canais digitais",
-        "Retenção de 0,15% por transação TEF",
+        "Multiadquirência e conciliação por estabelecimento",
         "Captura automática de cada venda",
         "Receita: tarifa sobre transações no PDV",
       ],
@@ -46,7 +46,7 @@ const ECOSYSTEM = {
         "Transação entra na apuração Confra TEF",
         "Receita liquidada na conta MT",
       ],
-      revenue: "Retenção de 0,15% por transação TEF, liquidada na conta MT.",
+      revenue: "Tarifa sobre transações no PDV.",
       feeRate: 0.018,
       partnerShare: 0.3,
     },
