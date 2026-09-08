@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Ecossistema confrapag — modelo técnico</title>
-  <meta name="description" content="4 produtos integrados, uma conta no MT e um mecanismo completo para apuração e comissionamento de transações." />
+  <meta name="description" content="8 produtos integrados, uma conta no MT e um mecanismo completo para apuração e comissionamento de transações." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -45,11 +45,11 @@
         <img class="brand-logo hero-logo" src="assets/logo-confrapag.png" alt="confrapag">
       </h1>
       <p class="lead">
-        4 produtos integrados, uma conta no MT e um mecanismo completo
+        8 produtos integrados, uma conta no MT e um mecanismo completo
         para apuração e comissionamento de transações.
       </p>
       <ul class="kpis" aria-label="Indicadores do ecossistema">
-        <li><strong>4</strong><span>Produtos integrados</span></li>
+        <li><strong>8</strong><span>Produtos integrados</span></li>
         <li><strong>1</strong><span>Conta concentradora no MT</span></li>
         <li><strong>16</strong><span>Operações</span></li>
         <li><strong>5</strong><span>Etapas de apuração</span></li>
@@ -88,12 +88,32 @@
       </div>
 
       <div class="eco-stage" data-active="all">
-        <svg class="eco-lines" viewBox="0 0 1200 720" preserveAspectRatio="none" aria-hidden="true">
-          <line class="spoke spoke-pix" x1="250" y1="150" x2="600" y2="310" />
-          <line class="spoke spoke-tef" x1="950" y1="150" x2="600" y2="310" />
-          <line class="spoke spoke-system" x1="250" y1="470" x2="600" y2="350" />
-          <line class="spoke spoke-hub" x1="950" y1="470" x2="600" y2="350" />
+        <svg class="eco-lines" viewBox="0 0 1200 900" preserveAspectRatio="none" aria-hidden="true">
+          <line class="spoke spoke-pix" x1="250" y1="150" x2="600" y2="400" />
+          <line class="spoke spoke-tef" x1="950" y1="150" x2="600" y2="400" />
+          <line class="spoke spoke-system" x1="250" y1="470" x2="600" y2="400" />
+          <line class="spoke spoke-hub" x1="950" y1="470" x2="600" y2="400" />
+          <line class="spoke spoke-wiki" x1="250" y1="80" x2="600" y2="400" />
+          <line class="spoke spoke-shopping" x1="950" y1="80" x2="600" y2="400" />
+          <line class="spoke spoke-universidade" x1="250" y1="700" x2="600" y2="400" />
+          <line class="spoke spoke-eventos" x1="950" y1="700" x2="600" y2="400" />
         </svg>
+
+        <article class="product-card wiki" data-product="wiki" tabindex="0">
+          <div class="product-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><circle cx="12" cy="24" r="5"/><circle cx="36" cy="14" r="5"/><circle cx="36" cy="34" r="5"/><path d="M16.5 22 31 16M16.5 26 31 32"/></svg>
+          </div>
+          <h3>Wiki e ConfraBase</h3>
+          <p>Processamento de transações.</p>
+        </article>
+
+        <article class="product-card shopping" data-product="shopping" tabindex="0">
+          <div class="product-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><path d="M14 16h20l-2 22H16L14 16Z"/><path d="M18 16a6 6 0 0 1 12 0"/></svg>
+          </div>
+          <h3>Confra Shopping</h3>
+          <p>Venda de produtos e serviços para nossa base de clientes.</p>
+        </article>
 
         <article class="product-card pix" data-product="pix" tabindex="0">
           <div class="product-icon" aria-hidden="true">
@@ -163,6 +183,22 @@
             <li data-service="certificado"><span class="mini-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3 5 6.5v6.2c0 4.2 2.9 8 7 9.3 4.1-1.3 7-5.1 7-9.3V6.5L12 3Z"/><path d="m9 12 2 2 4-4"/></svg></span>Certificado digital</li>
             <li data-service="energia"><span class="mini-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 19c6-1 9-6 11-14 3 5 4 9 3 14-5-1-9 0-14 0Z"/></svg></span>Confra Energia</li>
           </ul>
+        </article>
+
+        <article class="product-card universidade" data-product="universidade" tabindex="0">
+          <div class="product-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><path d="M8 20 24 12l16 8-16 8-16-8Z"/><path d="M14 24v10c4 3 16 3 20 0V24"/></svg>
+          </div>
+          <h3>Universidade Confrapag</h3>
+          <p>Treinamento contínuo para nossa base de clientes e colaboradores.</p>
+        </article>
+
+        <article class="product-card eventos" data-product="eventos" tabindex="0">
+          <div class="product-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><rect x="8" y="12" width="32" height="28" rx="3"/><path d="M8 20h32M16 8v8M32 8v8"/></svg>
+          </div>
+          <h3>Confra Eventos</h3>
+          <p>Convenção Nacional, regionais e Paulo Por Aí.</p>
         </article>
 
         <aside class="side-card clients">

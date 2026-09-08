@@ -98,6 +98,98 @@ const ECOSYSTEM = {
       feeRate: 0.08,
       partnerShare: 0.3,
     },
+    wiki: {
+      name: "Wiki e ConfraBase",
+      tag: "Processamento de transações",
+      title: "Wiki e ConfraBase",
+      summary: "Processamento de transações.",
+      detail:
+        "Wiki e ConfraBase consolidam a receita de processamento. A cobrança é por volume de transações, com liquidação na conta concentradora.",
+      checks: [
+        "Processamento de transações",
+        "Cobrança por volume processado",
+        "Liquidação na conta concentradora",
+        "Subconta própria na conta MT",
+      ],
+      flow: [
+        "Transação é processada na ponta",
+        "Volume entra na apuração Wiki e ConfraBase",
+        "Receita de processamento é calculada",
+        "Valor liquidado na conta MT",
+      ],
+      revenue: "Processamento de transações.",
+      feeRate: 0.008,
+      partnerShare: 0.3,
+    },
+    shopping: {
+      name: "Confra Shopping",
+      tag: "Marketplace da base",
+      title: "Confra Shopping",
+      summary: "Venda de produtos e serviços para nossa base de clientes.",
+      detail:
+        "O Confra Shopping opera como marketplace com retenção percentual sobre as vendas entre clientes da base, liquidada na conta concentradora.",
+      checks: [
+        "Venda de produtos e serviços para a nossa base de clientes",
+        "Retenção percentual nas vendas da base",
+        "Liquidação na conta concentradora",
+        "Subconta própria na conta MT",
+      ],
+      flow: [
+        "Cliente da base realiza a compra",
+        "Venda é registrada no Confra Shopping",
+        "Percentual é apurado",
+        "Receita liquidada na conta MT",
+      ],
+      revenue: "Venda de produtos e serviços para nossa base de clientes.",
+      feeRate: 0.06,
+      partnerShare: 0.3,
+    },
+    universidade: {
+      name: "Universidade Confrapag",
+      tag: "Treinamento contínuo",
+      title: "Universidade Confrapag",
+      summary: "Treinamento contínuo para nossa base de clientes e colaboradores.",
+      detail:
+        "A Universidade Confrapag tem subconta própria para a receita de cursos e treinamentos contínuos destinados à base de clientes e aos colaboradores.",
+      checks: [
+        "Treinamento contínuo para clientes e colaboradores",
+        "Subconta própria para receita de cursos",
+        "Liquidação na conta concentradora",
+        "Apuração junto às demais linhas do ecossistema",
+      ],
+      flow: [
+        "Cliente ou colaborador se inscreve no curso",
+        "Venda entra na apuração da Universidade",
+        "Receita é classificada na subconta",
+        "Valor liquidado na conta MT",
+      ],
+      revenue: "Treinamento contínuo para nossa base de clientes e colaboradores.",
+      feeRate: 0.1,
+      partnerShare: 0.3,
+    },
+    eventos: {
+      name: "Confra Eventos",
+      tag: "Convenções e encontros",
+      title: "Confra Eventos",
+      summary: "Convenção Nacional, regionais e Paulo Por Aí.",
+      detail:
+        "O Confra Eventos concentra convenção nacional, encontros regionais e Paulo Por Aí, com subconta própria na conta concentradora.",
+      checks: [
+        "Convenção Nacional",
+        "Convenções regionais",
+        "Paulo Por Aí",
+        "Subconta própria na conta MT",
+      ],
+      flow: [
+        "Evento é realizado na rede",
+        "Receitas entram na apuração Confra Eventos",
+        "Valores são classificados na subconta",
+        "Liquidação na conta MT",
+      ],
+      revenue: "Convenção Nacional, regionais e Paulo Por Aí.",
+      feeRate: 0.08,
+      partnerShare: 0.3,
+    },
   },
   hubServices: {
     cred: {
@@ -289,28 +381,6 @@ const ECOSYSTEM = {
         "30% operação",
         "Conciliação entre valor recebido e comissão paga",
       ],
-    },
-  ],
-  extraRevenue: [
-    {
-      id: "pix",
-      name: "Wiki e ConfraBase",
-      revenue: "Processamento por volume de transações, cobrado via boleto de Capta, IPAG e MTBank.",
-    },
-    {
-      id: "hub",
-      name: "Confra Shopping",
-      revenue: "Marketplace: retenção percentual sobre vendas entre clientes da base.",
-    },
-    {
-      id: "system",
-      name: "Universidade Confrapag",
-      revenue: "Subconta própria para a receita de cursos vendidos.",
-    },
-    {
-      id: "tef",
-      name: "Confra Eventos",
-      revenue: "Convenções regionais e encontros, com subconta própria.",
     },
   ],
 };
@@ -524,6 +594,10 @@ const PRODUCT_COLORS = {
   tef: "#e87722",
   system: "#1e4d8c",
   hub: "#7a2d91",
+  wiki: "#00a651",
+  shopping: "#7a2d91",
+  universidade: "#1e4d8c",
+  eventos: "#e87722",
 };
 
 function pct(part, total) {
@@ -748,6 +822,10 @@ function drawSpokes() {
     tef: document.querySelector(".spoke-tef"),
     system: document.querySelector(".spoke-system"),
     hub: document.querySelector(".spoke-hub"),
+    wiki: document.querySelector(".spoke-wiki"),
+    shopping: document.querySelector(".spoke-shopping"),
+    universidade: document.querySelector(".spoke-universidade"),
+    eventos: document.querySelector(".spoke-eventos"),
   };
   if (!svg || !stage || !hubEl || window.innerWidth <= 1080) return;
 

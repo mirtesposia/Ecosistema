@@ -383,12 +383,13 @@ a {
 .eco-stage {
   position: relative;
   display: grid;
-  grid-template-columns: 1fr minmax(300px, 390px) 1fr;
+  grid-template-columns: 1fr minmax(280px, 360px) 1fr;
   grid-template-areas:
+    "wiki hub shopping"
     "pix hub tef"
     "system hub hubprod"
-    "clients clients hubprod";
-  gap: 22px 28px;
+    "uni eventos clients";
+  gap: 18px 22px;
   align-items: stretch;
 }
 
@@ -412,6 +413,10 @@ a {
 .spoke-tef { stroke: var(--tef); }
 .spoke-system { stroke: var(--system); }
 .spoke-hub { stroke: var(--hub); }
+.spoke-wiki { stroke: var(--pix); }
+.spoke-shopping { stroke: var(--hub); }
+.spoke-universidade { stroke: var(--system); }
+.spoke-eventos { stroke: var(--tef); }
 
 .eco-stage[data-active="all"] .spoke {
   opacity: 0.35;
@@ -420,7 +425,11 @@ a {
 .eco-stage[data-active="pix"] .spoke-pix,
 .eco-stage[data-active="tef"] .spoke-tef,
 .eco-stage[data-active="system"] .spoke-system,
-.eco-stage[data-active="hub"] .spoke-hub {
+.eco-stage[data-active="hub"] .spoke-hub,
+.eco-stage[data-active="wiki"] .spoke-wiki,
+.eco-stage[data-active="shopping"] .spoke-shopping,
+.eco-stage[data-active="universidade"] .spoke-universidade,
+.eco-stage[data-active="eventos"] .spoke-eventos {
   opacity: 0.85;
   stroke-width: 2;
 }
@@ -428,7 +437,11 @@ a {
 .eco-stage[data-active="pix"] .spoke:not(.spoke-pix),
 .eco-stage[data-active="tef"] .spoke:not(.spoke-tef),
 .eco-stage[data-active="system"] .spoke:not(.spoke-system),
-.eco-stage[data-active="hub"] .spoke:not(.spoke-hub) {
+.eco-stage[data-active="hub"] .spoke:not(.spoke-hub),
+.eco-stage[data-active="wiki"] .spoke:not(.spoke-wiki),
+.eco-stage[data-active="shopping"] .spoke:not(.spoke-shopping),
+.eco-stage[data-active="universidade"] .spoke:not(.spoke-universidade),
+.eco-stage[data-active="eventos"] .spoke:not(.spoke-eventos) {
   opacity: 0.12;
 }
 
@@ -443,6 +456,10 @@ a {
 .product-card.tef { grid-area: tef; }
 .product-card.system { grid-area: system; }
 .product-card.hub-prod { grid-area: hubprod; }
+.product-card.wiki { grid-area: wiki; }
+.product-card.shopping { grid-area: shopping; }
+.product-card.universidade { grid-area: uni; }
+.product-card.eventos { grid-area: eventos; }
 .hub {
   grid-area: hub;
   display: grid;
@@ -476,6 +493,10 @@ a {
 .product-card.tef { border-top: 5px solid var(--tef); }
 .product-card.system { border-top: 5px solid var(--system); }
 .product-card.hub-prod { border-top: 5px solid var(--hub); }
+.product-card.wiki { border-top: 5px solid var(--pix); }
+.product-card.shopping { border-top: 5px solid var(--hub); }
+.product-card.universidade { border-top: 5px solid var(--system); }
+.product-card.eventos { border-top: 5px solid var(--tef); }
 
 .product-card h3,
 .side-card h3,
@@ -524,6 +545,10 @@ a {
 .tef .product-icon { background: var(--tef-soft); color: var(--tef); }
 .system .product-icon { background: var(--system-soft); color: var(--system); }
 .hub-prod .product-icon { background: var(--hub-soft); color: var(--hub); }
+.wiki .product-icon { background: var(--pix-soft); color: var(--pix); }
+.shopping .product-icon { background: var(--hub-soft); color: var(--hub); }
+.universidade .product-icon { background: var(--system-soft); color: var(--system); }
+.eventos .product-icon { background: var(--tef-soft); color: var(--tef); }
 
 .product-card.hub-prod {
   padding: 14px 16px 12px;
@@ -801,6 +826,10 @@ a {
 .tag.tef { background: var(--tef-soft); color: var(--tef); }
 .tag.system { background: var(--system-soft); color: var(--system); }
 .tag.hub { background: var(--hub-soft); color: var(--hub); }
+.tag.wiki { background: var(--pix-soft); color: var(--pix); }
+.tag.shopping { background: var(--hub-soft); color: var(--hub); }
+.tag.universidade { background: var(--system-soft); color: var(--system); }
+.tag.eventos { background: var(--tef-soft); color: var(--tef); }
 
 .checks,
 .rules ul,
@@ -1031,6 +1060,10 @@ a {
 .pill.tef { background: var(--tef); }
 .pill.system { background: var(--system); }
 .pill.hub { background: var(--hub); }
+.pill.wiki { background: var(--pix); }
+.pill.shopping { background: var(--hub); }
+.pill.universidade { background: var(--system); }
+.pill.eventos { background: var(--tef); }
 
 .layers {
   display: grid;
@@ -1233,6 +1266,8 @@ a {
       "hub hub"
       "pix tef"
       "system hubprod"
+      "wiki shopping"
+      "uni eventos"
       "clients clients";
   }
 
@@ -1314,6 +1349,10 @@ a {
       "tef"
       "system"
       "hubprod"
+      "wiki"
+      "shopping"
+      "uni"
+      "eventos"
       "clients";
   }
 
@@ -1926,6 +1965,10 @@ a {
       "tef"
       "system"
       "hubprod"
+      "wiki"
+      "shopping"
+      "uni"
+      "eventos"
       "clients";
     gap: 14px;
   }
