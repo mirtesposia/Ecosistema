@@ -12,7 +12,6 @@ const ECOSYSTEM = {
         "Toda transação Confra PIX é capturada em tempo real e encaminhada à central de conciliação para classificação, apuração e liquidação na conta concentradora do MT.",
       checks: [
         "QR Code, chave PIX, API e PDV",
-        "Spread PIX: custo do fornecedor versus venda à operação",
         "Liquidação na conta concentradora",
         "Rastreio por cliente, canal e estabelecimento",
         "Receita: tarifa sobre envio e recebimento",
@@ -23,7 +22,7 @@ const ECOSYSTEM = {
         "Evento chega à captura da central",
         "Receita creditada na conta MT",
       ],
-      revenue: "Spread PIX e tarifa sobre envio e recebimento.",
+      revenue: "Tarifa sobre envio e recebimento.",
       feeRate: 0.0099,
       partnerShare: 0.3,
     },
