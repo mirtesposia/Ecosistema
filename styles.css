@@ -383,12 +383,12 @@ a {
 .eco-stage {
   position: relative;
   display: grid;
-  grid-template-columns: 1fr minmax(280px, 360px) 1fr;
+  grid-template-columns: 1fr 1fr minmax(140px, 180px) minmax(140px, 180px) 1fr 1fr;
   grid-template-areas:
-    "pix hub tef"
-    "system hub hubprod"
-    "wiki shopping uni"
-    "eventos clients clients";
+    "pix pix hub hub tef tef"
+    "system system hub hub hubprod hubprod"
+    "wiki wiki wiki shopping shopping shopping"
+    "uni uni eventos eventos clients clients";
   gap: 18px 22px;
   align-items: stretch;
 }
@@ -1261,14 +1261,13 @@ a {
   }
 
   .eco-stage {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
     grid-template-areas:
-      "hub hub"
-      "pix tef"
-      "system hubprod"
-      "wiki shopping"
-      "uni eventos"
-      "clients clients";
+      "hub hub hub hub hub hub"
+      "pix pix pix tef tef tef"
+      "system system system hubprod hubprod hubprod"
+      "wiki wiki wiki shopping shopping shopping"
+      "uni uni eventos eventos clients clients";
   }
 
   .eco-lines {
