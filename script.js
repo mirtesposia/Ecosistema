@@ -59,7 +59,7 @@ const ECOSYSTEM = {
       detail:
         "O Confra SYSTEM tem CNPJ próprio. Portal, APIs e backoffice registram o uso; cada módulo tem subconta, com espaço para novos contratos.",
       checks: [
-        "Subcontas: Confra PDV, Confra Cobrança, Confra Emissor de Boleto e Geren Pix",
+        "Subcontas: Confra PDV, Confra Cobrança e Geren Pix",
         "CNPJ próprio, com inclusão de futuros contratos",
         "Mensalidades, taxas e valor fixo por produto",
         "API do conciliador confronta custos com a central de custos",
@@ -70,7 +70,7 @@ const ECOSYSTEM = {
         "Uso entra na apuração Confra SYSTEM",
         "Mensalidades e taxas na conta MT",
       ],
-      revenue: "Mensalidades e serviços dos módulos PDV, cobrança, emissor de boleto e Geren Pix.",
+      revenue: "Mensalidades e serviços dos módulos PDV, cobrança e Geren Pix.",
       feeRate: 0.05,
       partnerShare: 0.3,
     },
