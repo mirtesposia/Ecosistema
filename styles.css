@@ -385,10 +385,10 @@ a {
   display: grid;
   grid-template-columns: 1fr minmax(280px, 360px) 1fr;
   grid-template-areas:
-    "wiki hub shopping"
     "pix hub tef"
     "system hub hubprod"
-    "uni eventos clients";
+    "wiki shopping uni"
+    "eventos clients clients";
   gap: 18px 22px;
   align-items: stretch;
 }
