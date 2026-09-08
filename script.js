@@ -307,6 +307,11 @@ const ECOSYSTEM = {
       name: "Universidade Confrapag",
       revenue: "Subconta própria para a receita de cursos vendidos.",
     },
+    {
+      id: "tef",
+      name: "Confra Eventos",
+      revenue: "Convenções regionais e encontros, com subconta própria.",
+    },
   ],
 };
 
