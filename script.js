@@ -99,12 +99,12 @@ const ECOSYSTEM = {
       partnerShare: 0.3,
     },
     wiki: {
-      name: "Weqi e BaaS",
+      name: "Weki e BaaS",
       tag: "Processamento de transações",
-      title: "Weqi e BaaS",
+      title: "Weki e BaaS",
       summary: "Processamento de transações.",
       detail:
-        "Weqi e BaaS consolidam a receita de processamento. A cobrança é por volume de transações, com liquidação na conta concentradora.",
+        "Weki e BaaS consolidam a receita de processamento. A cobrança é por volume de transações, com liquidação na conta concentradora.",
       checks: [
         "Processamento de transações",
         "Cobrança por volume processado",
@@ -113,7 +113,7 @@ const ECOSYSTEM = {
       ],
       flow: [
         "Transação é processada na ponta",
-        "Volume entra na apuração Weqi e BaaS",
+        "Volume entra na apuração Weki e BaaS",
         "Receita de processamento é calculada",
         "Valor liquidado na conta MT",
       ],
@@ -354,11 +354,11 @@ const ECOSYSTEM = {
     {
       kicker: "Confra PIX Online",
       title: "Spread, CNPJ e processamento",
-      text: "O Confra PIX Online tem estrutura própria, com outros sócios e CNPJ específico. A margem permanece na conta do produto. Weqi e BaaS consolidam a receita de processamento.",
+      text: "O Confra PIX Online tem estrutura própria, com outros sócios e CNPJ específico. A margem permanece na conta do produto. Weki e BaaS consolidam a receita de processamento.",
       items: [
         "CNPJ e estrutura próprios",
         "Custo Celcoin: R$ 0,29 por PIX · venda às operações: R$ 0,89",
-        "Weqi e BaaS: cobrança por volume processado",
+        "Weki e BaaS: cobrança por volume processado",
         "Boleto de cobrança a Capta, IPAG e MTBank",
       ],
     },
