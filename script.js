@@ -33,12 +33,12 @@ const ECOSYSTEM = {
       summary:
         "Soluções de pagamento integrado para o ponto de venda físico e digital com confiabilidade e eficiência.",
       detail:
-        "A venda no PDV ou pinpad é autorizada, entra na apuração Confra TEF e a receita correspondente é liquidada na conta MT.",
+        "A venda no PDV ou pinpad é autorizada, entra na apuração Confra TEF e a receita correspondente é liquidada na conta MT, com retenção de 0,15% por transação.",
       checks: [
         "PDV físico, pinpad e canais digitais",
         "Multiadquirência e conciliação por estabelecimento",
         "Captura automática de cada venda",
-        "Receita: tarifa sobre transações no PDV",
+        "Receita: tarifa sobre transações no PDV e retenção de 0,15% por transação",
       ],
       flow: [
         "Venda no PDV ou pinpad",
@@ -46,7 +46,7 @@ const ECOSYSTEM = {
         "Transação entra na apuração Confra TEF",
         "Receita liquidada na conta MT",
       ],
-      revenue: "Tarifa sobre transações no PDV.",
+      revenue: "Tarifa sobre transações no PDV e retenção de 0,15% por transação.",
       feeRate: 0.018,
       partnerShare: 0.3,
     },
