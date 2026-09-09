@@ -9,7 +9,7 @@ const ECOSYSTEM = {
       summary:
         "Soluções completas para recebimentos e pagamentos instantâneos com segurança, agilidade e alta disponibilidade.",
       detail:
-        "Toda transação Confra PIX é capturada em tempo real e encaminhada à central de conciliação para classificação, apuração e liquidação na conta concentradora do MT.",
+        "Toda transação Confra PIX é capturada em tempo real e encaminhada à Central de apuração, comissionamento e conciliação, que transforma cada transação em receita, com controle, conciliação, apuração e comissionamento, e liquida na conta concentradora do MT.",
       checks: [
         "QR Code, chave PIX, API e PDV",
         "Liquidação na conta concentradora",
