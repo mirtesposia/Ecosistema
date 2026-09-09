@@ -57,7 +57,7 @@ const ECOSYSTEM = {
       summary:
         "Plataforma tecnológica e APIs robustas para integração, automação e gestão completa das operações.",
       detail:
-        "O Confra SYSTEM tem CNPJ próprio e a operação entra por contrato por adesão ao Confra SYSTEM. Portal, APIs e backoffice registram o uso; cada módulo tem subconta na conta concentradora, com espaço para novos contratos.",
+        "O Confra SYSTEM tem CNPJ próprio e contrato por adesão ao Confra SYSTEM. Portal, APIs e backoffice registram o uso; cada módulo tem subconta na conta concentradora, com espaço para novos contratos.",
       checks: [
         "Subcontas: Confra PDV, Confra Cobrança e Geren Pix",
         "CNPJ próprio e contrato por adesão ao Confra SYSTEM",
