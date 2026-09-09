@@ -671,10 +671,12 @@ a {
 .hub-inner h3 {
   color: var(--white);
   margin: 0;
-  font-size: 0.92rem;
-  line-height: 1.25;
-  max-width: 220px;
+  font-size: 0.78rem;
+  line-height: 1.2;
+  max-width: 240px;
   font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
 }
 
 .mt-box {
@@ -2009,7 +2011,7 @@ a {
   }
 
   .hub-inner h3 {
-    font-size: 0.88rem;
+    font-size: 0.72rem;
   }
 
   .mt-box {
