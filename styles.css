@@ -388,7 +388,8 @@ a {
     "pix pix hub hub tef tef"
     "system system hub hub hubprod hubprod"
     "wiki wiki . . shopping shopping"
-    "uni uni eventos eventos clients clients";
+    "uni uni . . eventos eventos"
+    "clients clients clients clients clients clients";
   gap: 18px 22px;
   align-items: stretch;
 }
@@ -465,7 +466,11 @@ a {
   display: grid;
   place-items: center;
 }
-.clients { grid-area: clients; }
+.clients {
+  grid-area: clients;
+  justify-self: center;
+  width: min(100%, 420px);
+}
 
 .product-card,
 .side-card {
@@ -1267,7 +1272,8 @@ a {
       "pix pix pix tef tef tef"
       "system system system hubprod hubprod hubprod"
       "wiki wiki wiki shopping shopping shopping"
-      "uni uni eventos eventos clients clients";
+      "uni uni . . eventos eventos"
+      "clients clients clients clients clients clients";
   }
 
   .eco-lines {
@@ -1353,6 +1359,11 @@ a {
       "uni"
       "eventos"
       "clients";
+  }
+
+  .clients {
+    justify-self: stretch;
+    width: auto;
   }
 
   .hero {
