@@ -82,12 +82,7 @@ const ECOSYSTEM = {
         "Soluções inteligentes",
       detail:
         "Cada unidade do Confra HUB tem subconta própria. A receita do fornecedor entra, é apurada e o HUB repassa às operações, conciliando o recebido com a comissão da rede licenciada.",
-      checks: [
-        "Confra Cred (Confrac / Credit César), Confra Energia, débitos veiculares e certificação digital",
-        "Débitos veiculares: convênio Parcele na Hora · Certificado: Cert Sign",
-        "Custo da operação (ex.: certificado digital) entra na apuração e é conciliado via API",
-        "Repasse do HUB para as operações via subconta na conta MT",
-      ],
+      checks: [],
       flow: [
         "Estabelecimento Comercial (EC) contrata o serviço do Confra HUB",
         "Operação é processada no produto",
@@ -424,7 +419,7 @@ function renderProducts() {
               <p class="tag ${id}">${product.tag}</p>
               <h3>${product.title}</h3>
               <p>${product.detail}</p>
-              <ul class="checks">${product.checks.map((item) => `<li>${item}</li>`).join("")}</ul>
+              ${product.checks.length ? `<ul class="checks">${product.checks.map((item) => `<li>${item}</li>`).join("")}</ul>` : ""}
             </div>
             <ol class="mini-flow">
               ${product.flow.map((item, i) => `<li><span>0${i + 1}</span> ${item}</li>`).join("")}
@@ -861,7 +856,7 @@ function openInspector(id) {
     <h2 id="inspector-title">${product.title}</h2>
     <p>${product.summary}</p>
     <p>${product.detail}</p>
-    <ul class="checks">${product.checks.map((item) => `<li>${item}</li>`).join("")}</ul>
+    ${product.checks.length ? `<ul class="checks">${product.checks.map((item) => `<li>${item}</li>`).join("")}</ul>` : ""}
     <p><strong>Fonte de receita:</strong> ${product.revenue}</p>
   `;
   inspector.hidden = false;
