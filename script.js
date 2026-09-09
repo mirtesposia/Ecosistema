@@ -284,7 +284,7 @@ const ECOSYSTEM = {
   layers: [
     { n: "Camada 1", title: "Origem", text: "Estabelecimentos Comerciais (EC) e usuários finais geram transações nos canais Confra PIX, Confra TEF, Confra SYSTEM e Confra HUB." },
     { n: "Camada 2", title: "Produtos", text: "Cada produto processa, autoriza e registra o evento, mantendo a especialização da ponta." },
-    { n: "Camada 3", title: `Central ${LOGO}`, text: "Conciliação, classificação, regras de comissão e visão única das 16 operações." },
+    { n: "Camada 3", title: `Central ${LOGO}`, text: "Conciliação, classificação, regras de comissão e visão única das 20 operações." },
     { n: "Camada 4", title: "Conta MT", text: "Liquidação na conta Confrapagmtos, com CNPJ e subconta por produto. Único ponto de entrada de receita do ecossistema." },
     { n: "Camada 5", title: "Distribuição", text: "Repasses a parceiros, extratos, dashboards e trilha de auditoria para gestão e compliance." },
   ],
@@ -783,7 +783,7 @@ function renderSimulatorOptions() {
     Object.entries(ECOSYSTEM.products)
       .map(([id, product]) => `<option value="${id}">${product.name}</option>`)
       .join("");
-  simOperation.innerHTML = Array.from({ length: 16 }, (_, index) => {
+  simOperation.innerHTML = Array.from({ length: 20 }, (_, index) => {
     const n = String(index + 1).padStart(2, "0");
     return `<option value="${index + 1}">Operação ${n}</option>`;
   }).join("");
