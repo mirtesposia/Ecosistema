@@ -171,12 +171,12 @@ const ECOSYSTEM = {
       name: "Confra Eventos",
       tag: "Convenções e encontros",
       title: "Confra Eventos",
-      summary: "Convenção Nacional, regionais e Paulo Por Aí.",
+      summary: "Convenção Nacional, Regionais e Paulo Por Aí.",
       detail:
-        "O Confra Eventos concentra convenção nacional, encontros regionais e Paulo Por Aí, com subconta própria na conta concentradora.",
+        "O Confra Eventos concentra Convenção Nacional, Regionais e Paulo Por Aí, com subconta própria na conta concentradora.",
       checks: [
         "Convenção Nacional",
-        "Convenções regionais",
+        "Regionais",
         "Paulo Por Aí",
         "Subconta própria na conta MT",
       ],
@@ -186,7 +186,7 @@ const ECOSYSTEM = {
         "Valores são classificados na subconta",
         "Liquidação na conta MT",
       ],
-      revenue: "Convenção Nacional, regionais e Paulo Por Aí.",
+      revenue: "Convenção Nacional, Regionais e Paulo Por Aí.",
       feeRate: 0.08,
       partnerShare: 0.3,
     },
@@ -369,7 +369,7 @@ const ECOSYSTEM = {
       items: [
         "Confra Shopping: marketplace com retenção percentual nas vendas entre clientes da base",
         "Universidade Confrapag: subconta para receita de cursos",
-        "Eventos: convenções regionais e Paulo Por Aí",
+        "Eventos: Convenção Nacional, Regionais e Paulo Por Aí",
       ],
     },
     {
