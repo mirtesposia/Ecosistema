@@ -388,8 +388,7 @@ a {
     "pix pix hub hub tef tef"
     "system system hub hub hubprod hubprod"
     "wiki wiki . . shopping shopping"
-    "uni uni . . eventos eventos"
-    "clients clients clients clients clients clients";
+    "base base base base base base";
   gap: 18px 22px;
   align-items: stretch;
 }
@@ -465,6 +464,18 @@ a {
   grid-area: hub;
   display: grid;
   place-items: center;
+}
+.eco-base {
+  grid-area: base;
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "uni eventos"
+    "clients clients";
+  gap: 18px 22px;
+  align-items: stretch;
 }
 .clients {
   grid-area: clients;
@@ -1272,8 +1283,7 @@ a {
       "pix pix pix tef tef tef"
       "system system system hubprod hubprod hubprod"
       "wiki wiki wiki shopping shopping shopping"
-      "uni uni . . eventos eventos"
-      "clients clients clients clients clients clients";
+      "base base base base base base";
   }
 
   .eco-lines {
@@ -1356,6 +1366,12 @@ a {
       "hubprod"
       "wiki"
       "shopping"
+      "base";
+  }
+
+  .eco-base {
+    grid-template-columns: 1fr;
+    grid-template-areas:
       "uni"
       "eventos"
       "clients";
@@ -1977,9 +1993,7 @@ a {
       "hubprod"
       "wiki"
       "shopping"
-      "uni"
-      "eventos"
-      "clients";
+      "base";
     gap: 14px;
   }
 
