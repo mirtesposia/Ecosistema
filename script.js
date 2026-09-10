@@ -81,12 +81,12 @@ const ECOSYSTEM = {
       summary:
         "Soluções inteligentes",
       detail:
-        "Cada unidade do Confra HUB tem subconta própria. A receita do fornecedor entra, é apurada e o HUB repassa às operações, conciliando o recebido com a comissão da rede licenciada.",
+        "Cada serviço do Confra HUB tem subconta própria, que gera comissionamento, considerando o preço de venda, preço de compra e o custo.",
       checks: [],
       flow: [
         "Estabelecimento Comercial (EC) contrata o serviço do Confra HUB",
-        "Operação é processada no produto",
-        "Taxa e comissão são calculadas",
+        "Serviço entra na subconta própria",
+        "Comissionamento considera preço de venda, preço de compra e custo",
         "Valor liquidado na conta MT",
       ],
       revenue: "Taxa pelos serviços e soluções para Estabelecimento Comercial (EC).",
