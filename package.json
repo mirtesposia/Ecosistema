@@ -1,0 +1,10 @@
+{
+  "name": "ecossistema-confrapag",
+  "private": true,
+  "scripts": {
+    "build:engine": "esbuild engine/src/index.ts --bundle --format=iife --global-name=ConfraEngine --outfile=engine.bundle.js --target=es2020"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.9"
+  }
+}

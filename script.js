@@ -1,4 +1,4 @@
-const LOGO = '<img class="logo-inline" src="assets/logo-confrapag.png" alt="confrapag">';
+﻿const LOGO = '<img class="logo-inline" src="assets/logo-confrapag.png" alt="confrapag">';
 
 const ECOSYSTEM = {
   products: {
@@ -59,7 +59,7 @@ const ECOSYSTEM = {
       detail:
         "O Confra SYSTEM tem CNPJ próprio e contrato por adesão ao Confra SYSTEM. Portal, APIs e backoffice registram o uso; cada módulo tem subconta na conta concentradora, com espaço para novos contratos.",
       checks: [
-        "Subcontas: Confra PDV, Confra Cobrança e Geren Pix",
+        "Subcontas: Confra PDV, Confra Cobrança e Confra GerenPix",
         "CNPJ próprio e contrato por adesão ao Confra SYSTEM",
         "Mensalidades, taxas e valor fixo por produto",
         "API do conciliador confronta custos com a central de custos",
@@ -70,7 +70,7 @@ const ECOSYSTEM = {
         "Uso entra na apuração Confra SYSTEM",
         "Mensalidades e taxas na conta MT",
       ],
-      revenue: "Mensalidades e serviços dos módulos PDV, cobrança e Geren Pix.",
+      revenue: "Mensalidades e serviços dos módulos Confra PDV, Confra Cobrança e Confra GerenPix.",
       feeRate: 0.05,
       partnerShare: 0.3,
     },
@@ -82,7 +82,12 @@ const ECOSYSTEM = {
         "Soluções inteligentes",
       detail:
         "Cada serviço do Confra HUB tem subconta própria, que gera comissionamento, considerando o preço de venda, preço de compra e o custo.",
-      checks: [],
+      checks: [
+        "Seis famílias de solução no mesmo Hub",
+        "Foco em economia, regularização e sustentabilidade",
+        "Comissionamento por serviço e parceiro",
+        "Receita: taxa sobre serviços ao Estabelecimento Comercial (EC)",
+      ],
       flow: [
         "Estabelecimento Comercial (EC) contrata o serviço do Confra HUB",
         "Serviço entra na subconta própria",
@@ -143,47 +148,47 @@ const ECOSYSTEM = {
       name: "Universidade Confrapag",
       tag: "Treinamento contínuo",
       title: "Universidade Confrapag",
-      summary: "Treinamento contínuo para nossa base de clientes e colaboradores.",
+      summary: "Catálogo próprio de cursos para a base de clientes e os colaboradores.",
       detail:
-        "A Universidade Confrapag tem subconta própria para a receita de cursos e treinamentos contínuos destinados à base de clientes e aos colaboradores.",
+        "A Universidade Confrapag tem autonomia para gerir os cursos vendidos: catálogo, matrículas, preço e custo entram na subconta própria, sem depender de percentual sobre o TPV dos outros produtos.",
       checks: [
-        "Treinamento contínuo para clientes e colaboradores",
-        "Subconta própria para receita de cursos",
-        "Liquidação na conta concentradora",
-        "Apuração junto às demais linhas do ecossistema",
+        "Catálogo próprio de cursos e treinamentos",
+        "Matrículas de clientes da base e colaboradores",
+        "Subconta própria para a receita dos cursos",
+        "Apuração venda − compra − custo, sem split 70/30",
       ],
       flow: [
-        "Cliente ou colaborador se inscreve no curso",
-        "Venda entra na apuração da Universidade",
-        "Receita é classificada na subconta",
+        "Cliente ou colaborador se inscreve no curso do catálogo",
+        "A Universidade classifica a matrícula no curso vendido",
+        "Receita e custo entram na subconta da Universidade",
         "Valor liquidado na conta MT",
       ],
-      revenue: "Treinamento contínuo para nossa base de clientes e colaboradores.",
-      feeRate: 0.1,
-      partnerShare: 0.3,
+      revenue: "Receita dos cursos vendidos no catálogo da Universidade.",
+      feeRate: 0,
+      partnerShare: 0,
     },
     eventos: {
       name: "Confra Eventos",
       tag: "Convenções e encontros",
       title: "Confra Eventos",
-      summary: "Convenção Nacional, Regionais e Paulo Por Aí.",
+      summary: "Catálogo próprio de Convenção Nacional, Regionais e Paulo Por Aí.",
       detail:
-        "O Confra Eventos concentra Convenção Nacional, Regionais e Paulo Por Aí, com subconta própria na conta concentradora.",
+        "O Confra Eventos tem autonomia para gerir os eventos vendidos: catálogo, ingressos, preço e custo entram na subconta própria, sem split 70/30 e sem percentual sobre o TPV dos outros produtos.",
       checks: [
-        "Convenção Nacional",
-        "Regionais",
-        "Paulo Por Aí",
-        "Subconta própria na conta MT",
+        "Catálogo próprio: Convenção Nacional, Regionais e Paulo Por Aí",
+        "Gestão de ingressos vendidos por evento",
+        "Subconta própria para a receita dos eventos",
+        "Apuração venda − compra − custo, sem split 70/30",
       ],
       flow: [
-        "Evento é realizado na rede",
-        "Receitas entram na apuração Confra Eventos",
-        "Valores são classificados na subconta",
-        "Liquidação na conta MT",
+        "Participante adquire ingresso no catálogo do Confra Eventos",
+        "O evento classifica a venda no catálogo e na subconta",
+        "Receita e custo entram na subconta do Confra Eventos",
+        "Valor liquidado na conta MT",
       ],
-      revenue: "Convenção Nacional, Regionais e Paulo Por Aí.",
-      feeRate: 0.08,
-      partnerShare: 0.3,
+      revenue: "Receita dos eventos vendidos no catálogo do Confra Eventos.",
+      feeRate: 0,
+      partnerShare: 0,
     },
   },
   hubServices: {
@@ -216,7 +221,7 @@ const ECOSYSTEM = {
     {
       n: 1,
       name: "Captura",
-      text: "Todas as transações dos produtos (Confra PIX, Confra TEF, Confra SYSTEM e Confra HUB) são capturadas em tempo real.",
+      text: "Todas as transações dos produtos (Confra PIX, Confra TEF, Confra SYSTEM, Confra HUB, Weki e BaaS, Confra Shopping, Universidade Confrapag e Confra Eventos) são capturadas em tempo real.",
       icon: '<svg viewBox="0 0 48 48"><rect x="10" y="8" width="22" height="28" rx="2"/><circle cx="32" cy="30" r="8"/><path d="m36 34 6 6"/></svg>',
     },
     {
@@ -234,7 +239,7 @@ const ECOSYSTEM = {
     {
       n: 4,
       name: "Distribuição",
-      text: "Repasses automáticos das comissões para parceiros, conforme contratos e regras vigentes.",
+      text: "Repasses das comissões para parceiros, conforme contratos e regras vigentes.",
       icon: '<svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="16"/><path d="M24 14v20M18 19c1-1.6 2.6-2.4 4.4-2.4 2.8 0 4.6 1.5 4.6 3.8 0 4.6-9 2.8-9 7.4 0 2.2 1.9 3.8 4.6 3.8 2 0 3.6-.9 4.5-2.3"/></svg>',
     },
     {
@@ -272,7 +277,7 @@ const ECOSYSTEM = {
         "Receita do fornecedor entra, é apurada e repassada às operações",
         "Central de custos concilia contrato × produção via API",
         "Controladoria identifica divergência e aciona o jurídico",
-        "Fechamentos (ex.: energia) conciliam receita recebida e custo acordado",
+        "Fechamentos conciliam receita recebida e custo acordado",
       ],
     },
   ],
@@ -305,7 +310,7 @@ const ECOSYSTEM = {
     {
       kicker: "2ª etapa",
       title: "Conta MT, CNPJs e subcontas",
-      text: "Na conta Confrapagmtos, cada produto se vincula a um CNPJ e a subcontas. A receita do fornecedor entra, é apurada e o repasse segue para as operações de forma clara e conciliada.",
+      text: "Na conta MT Pagamentos, cada produto se vincula a um CNPJ e a subcontas. A receita do fornecedor entra, é apurada e o repasse segue para as operações de forma clara e conciliada.",
       items: [
         "Uma conta concentradora + CNPJ e subcontas por produto",
         "Receita do fornecedor → apuração → repasse às operações",
@@ -318,10 +323,12 @@ const ECOSYSTEM = {
       title: "Subcontas por unidade",
       text: "Cada linha do HUB tem subconta para conciliar o recebido com a comissão paga à rede licenciada.",
       items: [
-        "Confra Cred — Confrac / comissões Credit César",
-        "Confra Energia — subconta Confraenergia",
-        "Débitos veiculares — convênio Parcele na Hora",
-        "Certificação digital — Cert Sign",
+        "Confra Cred",
+        "Débitos veiculares",
+        "Parcelamento de tributos",
+        "Adiantamento de FGTS Aniversário",
+        "Certificado digital",
+        "Confra Energia",
       ],
     },
     {
@@ -331,50 +338,49 @@ const ECOSYSTEM = {
       items: [
         "Confra PDV",
         "Confra Cobrança",
-        "Confra Emissor de Boleto",
-        "Geren Pix",
+        "Confra GerenPix",
       ],
     },
     {
       kicker: "Confra TEF",
       title: "Retenção 0,15% e conciliação",
-      text: "A retenção de 0,15% por transação TEF vem embutida nos acertos de Capta e IPAG. O valor precisa ir para a conta do Confra TEF, senão o licenciado recebe em duplicidade.",
+      text: "A retenção de 0,15% por transação TEF vem embutida nos acertos de Fornecedores. O valor precisa ir para a conta do Confra TEF, senão o licenciado recebe em duplicidade.",
       items: [
         "Retenção de 0,15% por transação TEF",
-        "Origem: acertos Capta e IPAG",
+        "Origem: Acertos Fornecedores",
         "Repasse obrigatório para a conta Confra TEF",
         "Conciliação para evitar pagamento duplicado",
       ],
     },
     {
-      kicker: "Confra PIX Online",
-      title: "Spread, CNPJ e processamento",
-      text: "O Confra PIX Online tem estrutura própria, com outros sócios e CNPJ específico. A margem permanece na conta do produto. Weki e BaaS consolidam a receita de processamento.",
+      kicker: "Confra PIX",
+      title: "Confra PIX no arranjo",
+      text: "Toda transação Confra PIX é capturada em tempo real e encaminhada à Central de apuração, comissionamento e conciliação, que transforma cada transação em receita, com controle, conciliação, apuração e comissionamento, e liquida na conta concentradora do MT.",
       items: [
-        "CNPJ e estrutura próprios",
-        "Custo Celcoin: R$ 0,29 por PIX · venda às operações: R$ 0,89",
-        "Weki e BaaS: cobrança por volume processado",
-        "Boleto de cobrança a Capta, IPAG e MTBank",
+        "QR Code, chave PIX, API e PDV",
+        "Liquidação na conta concentradora",
+        "Rastreio por cliente, canal e estabelecimento",
+        "Receita: tarifa sobre envio e recebimento",
       ],
     },
     {
       kicker: "Confrapag",
       title: "Shopping, universidade e eventos",
-      text: "Linhas complementares de receita, apuradas na mesma conta concentradora quando a venda ocorre na base.",
+      text: "O Shopping usa percentual sobre vendas da base. Universidade e Eventos gerem o próprio catálogo, com preço e custo na subconta, sem split 70/30.",
       items: [
         "Confra Shopping: marketplace com retenção percentual nas vendas entre clientes da base",
-        "Universidade Confrapag: subconta para receita de cursos",
-        "Eventos: Convenção Nacional, Regionais e Paulo Por Aí",
+        "Universidade Confrapag: catálogo próprio, sem split 70/30",
+        "Confra Eventos: catálogo próprio de Convenção, Regionais e Paulo Por Aí, sem split 70/30",
       ],
     },
     {
       kicker: "Repasses",
       title: "Rede × Operação",
-      text: "O lucro apurado (venda − compra − custo) é distribuído automaticamente após a conciliação na conta MT.",
+      text: "O lucro apurado (venda − compra − custo) é distribuído automaticamente após a conciliação na conta MT, exceto na Universidade e no Confra Eventos.",
       items: [
         "70% rede licenciada",
         "30% operação",
-        "Conciliação entre valor recebido e comissão paga",
+        "Universidade e Eventos: lucro 100% na subconta, sem split",
       ],
     },
   ],
@@ -390,6 +396,8 @@ const simAmount = document.querySelector("#sim-amount");
 const simRevenue = document.querySelector("#sim-revenue");
 const simCommission = document.querySelector("#sim-commission");
 const simOperation = document.querySelector("#sim-operation");
+const simMonth = document.querySelector("#sim-month");
+const simYear = document.querySelector("#sim-year");
 const simTrack = document.querySelector("#sim-track");
 const simReceipt = document.querySelector("#sim-receipt");
 let pipelineTimer = 0;
@@ -540,7 +548,484 @@ function productEntries(productId) {
   return product ? [[productId, product]] : [];
 }
 
+function field(id) {
+  return document.querySelector(`#${id}`);
+}
+
+function isEngineProduct(id) {
+  return Boolean(window.ConfraEngine && ConfraEngine.ENGINE_PRODUCTS.includes(id));
+}
+
+function serviceOptions(services, selected) {
+  if (!services) return "";
+  return Object.entries(services)
+    .map(([id, service]) => `<option value="${id}"${id === selected ? " selected" : ""}>${service.name}</option>`)
+    .join("");
+}
+
+function onEngineInput() {
+  syncTefBands();
+  const settlement = getEngineSettlement();
+  if (settlement && simRevenue && simCommission) {
+    simRevenue.value = settlement.revenue.toFixed(2);
+    simCommission.value = settlement.split.operation30.toFixed(2);
+    if (simAmount) simAmount.value = settlement.amount.toFixed(2);
+  }
+  renderLiveReceipt();
+}
+
+function applyCatalogDefaults(kind) {
+  const services = kind === "system" ? window.ConfraEngine?.SYSTEM_SERVICES : window.ConfraEngine?.HUB_SERVICES;
+  const id = field(`sim-${kind}-service`)?.value;
+  const service = services?.[id];
+  if (!service) return;
+  if (field(`sim-${kind}-sale`)) field(`sim-${kind}-sale`).value = service.salePrice.toFixed(2);
+  if (field(`sim-${kind}-buy`)) field(`sim-${kind}-buy`).value = service.purchasePrice.toFixed(2);
+  if (field(`sim-${kind}-cost`)) field(`sim-${kind}-cost`).value = service.unitCost.toFixed(2);
+  onEngineInput();
+}
+
+function supplierSelectHtml(selected) {
+  const suppliers = window.ConfraEngine?.PIX_SUPPLIERS || ["F3", "F4", "F5", "F6", "F7"];
+  const current = selected || "F3";
+  const options = [`<option value="ALL"${current === "ALL" ? " selected" : ""}>Todos os fornecedores</option>`]
+    .concat(suppliers.map((id) => `<option value="${id}"${id === current ? " selected" : ""}>${id}</option>`));
+  return `<label>Fornecedor
+    <select id="sim-supplier">${options.join("")}</select>
+  </label>`;
+}
+
+function selectedSupplier() {
+  return field("sim-supplier")?.value || field("sim-pix-supplier")?.value || "F3";
+}
+
+const TEF_TPV_DEFAULT = { F3: 100000, F4: 20000, F5: 0, F6: 30000, F7: 0 };
+
+function tefBandInputs(contract) {
+  const bands = window.ConfraEngine?.TEF_BANDS || window.ConfraEngine?.PIX_SUPPLIERS || ["F3", "F4", "F5", "F6", "F7"];
+  const tpv = bands
+    .map(
+      (id) =>
+        `<label data-tef-band="${id}">TPV ${id} (R$)<input id="sim-tpv-${id.toLowerCase()}" type="number" min="0" step="0.01" value="${TEF_TPV_DEFAULT[id] ?? 0}" /></label>`
+    )
+    .join("");
+  const take = bands
+    .map((id) => {
+      const rate = contract[`take${id}`] ?? 0.015;
+      return `<label data-tef-band="${id}">Take ${id} (%)<input id="sim-take-${id.toLowerCase()}" type="number" min="0" step="0.01" value="${(rate * 100).toFixed(2)}" /></label>`;
+    })
+    .join("");
+  return `${tpv}${take}`;
+}
+
+function syncTefBands() {
+  const supplier = selectedSupplier();
+  document.querySelectorAll("[data-tef-band]").forEach((el) => {
+    const band = el.getAttribute("data-tef-band");
+    el.classList.toggle("is-hidden", supplier !== "ALL" && supplier !== band);
+  });
+}
+
+function tefBandValue(band, kind) {
+  const supplier = selectedSupplier();
+  if (supplier !== "ALL" && supplier !== band) return 0;
+  const id = `sim-${kind}-${band.toLowerCase()}`;
+  const raw = Number(field(id)?.value) || 0;
+  return kind === "take" ? raw / 100 : raw;
+}
+
+function universidadeCourseOptions(selected) {
+  const catalog = window.ConfraEngine?.UNIVERSIDADE_COURSES || {};
+  return Object.entries(catalog)
+    .map(([id, course]) => `<option value="${id}"${id === selected ? " selected" : ""}>${course.name}</option>`)
+    .join("");
+}
+
+function universidadeRowHtml(courseId, qty) {
+  const catalog = window.ConfraEngine?.UNIVERSIDADE_COURSES || {};
+  const ids = Object.keys(catalog);
+  const id = catalog[courseId] ? courseId : ids[0] || "onboarding";
+  const course = catalog[id] || { name: "Curso", audience: "cliente", salePrice: 0, purchasePrice: 0, unitCost: 0 };
+  return `<article class="sim-course-row">
+    <label>Curso<select class="sim-uni-course">${universidadeCourseOptions(id)}</select></label>
+    <label>Público<select class="sim-uni-audience">
+      <option value="cliente"${course.audience === "cliente" ? " selected" : ""}>Rede de Licenciados</option>
+      <option value="colaborador"${course.audience === "colaborador" ? " selected" : ""}>Colaborador</option>
+    </select></label>
+    <label>Matrículas<input class="sim-uni-qty" type="number" min="0" step="1" value="${qty}" /></label>
+    <label>Venda (R$)<input class="sim-uni-sale" type="number" min="0" step="0.01" value="${Number(course.salePrice).toFixed(2)}" /></label>
+    <label>Compra (R$)<input class="sim-uni-buy" type="number" min="0" step="0.01" value="${Number(course.purchasePrice).toFixed(2)}" /></label>
+    <label>Custo (R$)<input class="sim-uni-cost" type="number" min="0" step="0.01" value="${Number(course.unitCost).toFixed(2)}" /></label>
+    <button type="button" class="sim-uni-remove">Remover</button>
+  </article>`;
+}
+
+function applyUniversidadeCourse(row) {
+  const catalog = window.ConfraEngine?.UNIVERSIDADE_COURSES || {};
+  const course = catalog[row.querySelector(".sim-uni-course")?.value];
+  if (!course) return;
+  const audience = row.querySelector(".sim-uni-audience");
+  const sale = row.querySelector(".sim-uni-sale");
+  const buy = row.querySelector(".sim-uni-buy");
+  const cost = row.querySelector(".sim-uni-cost");
+  if (audience) audience.value = course.audience;
+  if (sale) sale.value = Number(course.salePrice).toFixed(2);
+  if (buy) buy.value = Number(course.purchasePrice).toFixed(2);
+  if (cost) cost.value = Number(course.unitCost).toFixed(2);
+  onEngineInput();
+}
+
+function bindUniversidadeRow(row) {
+  row.querySelector(".sim-uni-course")?.addEventListener("change", () => applyUniversidadeCourse(row));
+  row.querySelector(".sim-uni-remove")?.addEventListener("click", () => {
+    const list = row.parentElement;
+    if (list?.querySelectorAll(".sim-course-row").length <= 1) return;
+    row.remove();
+    onEngineInput();
+  });
+  row.querySelectorAll("input, select").forEach((el) => {
+    el.addEventListener("input", onEngineInput);
+    el.addEventListener("change", onEngineInput);
+  });
+}
+
+function nextUniversidadeCourseId(list) {
+  const catalog = window.ConfraEngine?.UNIVERSIDADE_COURSES || {};
+  const ids = Object.keys(catalog);
+  const used = [...list.querySelectorAll(".sim-uni-course")].map((select) => select.value);
+  return ids.find((id) => !used.includes(id)) || "hub";
+}
+
+function collectUniversidadeCourses() {
+  const catalog = window.ConfraEngine?.UNIVERSIDADE_COURSES || {};
+  return [...document.querySelectorAll("#sim-uni-courses .sim-course-row")].map((row) => {
+    const courseId = row.querySelector(".sim-uni-course")?.value || "onboarding";
+    return {
+      courseId,
+      name: catalog[courseId]?.name,
+      audience: row.querySelector(".sim-uni-audience")?.value || "cliente",
+      quantity: Number(row.querySelector(".sim-uni-qty")?.value) || 0,
+      salePrice: Number(row.querySelector(".sim-uni-sale")?.value) || 0,
+      purchasePrice: Number(row.querySelector(".sim-uni-buy")?.value) || 0,
+      unitCost: Number(row.querySelector(".sim-uni-cost")?.value) || 0,
+    };
+  });
+}
+
+function eventosOptions(selected) {
+  const catalog = window.ConfraEngine?.EVENTOS_CATALOG || {};
+  return Object.entries(catalog)
+    .map(([id, event]) => `<option value="${id}"${id === selected ? " selected" : ""}>${event.name}</option>`)
+    .join("");
+}
+
+function eventosRowHtml(eventId, qty) {
+  const catalog = window.ConfraEngine?.EVENTOS_CATALOG || {};
+  const ids = Object.keys(catalog);
+  const id = catalog[eventId] ? eventId : ids[0] || "nacional";
+  const event = catalog[id] || { name: "Evento", salePrice: 0, purchasePrice: 0, unitCost: 0 };
+  return `<article class="sim-course-row evt">
+    <label>Evento<select class="sim-evt-event">${eventosOptions(id)}</select></label>
+    <label>Ingressos<input class="sim-evt-qty" type="number" min="0" step="1" value="${qty}" /></label>
+    <label>Venda (R$)<input class="sim-evt-sale" type="number" min="0" step="0.01" value="${Number(event.salePrice).toFixed(2)}" /></label>
+    <label>Compra (R$)<input class="sim-evt-buy" type="number" min="0" step="0.01" value="${Number(event.purchasePrice).toFixed(2)}" /></label>
+    <label>Custo (R$)<input class="sim-evt-cost" type="number" min="0" step="0.01" value="${Number(event.unitCost).toFixed(2)}" /></label>
+    <button type="button" class="sim-uni-remove">Remover</button>
+  </article>`;
+}
+
+function applyEventosEvent(row) {
+  const catalog = window.ConfraEngine?.EVENTOS_CATALOG || {};
+  const event = catalog[row.querySelector(".sim-evt-event")?.value];
+  if (!event) return;
+  const sale = row.querySelector(".sim-evt-sale");
+  const buy = row.querySelector(".sim-evt-buy");
+  const cost = row.querySelector(".sim-evt-cost");
+  if (sale) sale.value = Number(event.salePrice).toFixed(2);
+  if (buy) buy.value = Number(event.purchasePrice).toFixed(2);
+  if (cost) cost.value = Number(event.unitCost).toFixed(2);
+  onEngineInput();
+}
+
+function bindEventosRow(row) {
+  row.querySelector(".sim-evt-event")?.addEventListener("change", () => applyEventosEvent(row));
+  row.querySelector(".sim-uni-remove")?.addEventListener("click", () => {
+    const list = row.parentElement;
+    if (list?.querySelectorAll(".sim-course-row").length <= 1) return;
+    row.remove();
+    onEngineInput();
+  });
+  row.querySelectorAll("input, select").forEach((el) => {
+    el.addEventListener("input", onEngineInput);
+    el.addEventListener("change", onEngineInput);
+  });
+}
+
+function nextEventosId(list) {
+  const catalog = window.ConfraEngine?.EVENTOS_CATALOG || {};
+  const ids = Object.keys(catalog);
+  const used = [...list.querySelectorAll(".sim-evt-event")].map((select) => select.value);
+  return ids.find((id) => !used.includes(id)) || "livre";
+}
+
+function collectEventosEvents() {
+  const catalog = window.ConfraEngine?.EVENTOS_CATALOG || {};
+  return [...document.querySelectorAll("#sim-evt-events .sim-course-row")].map((row) => {
+    const eventId = row.querySelector(".sim-evt-event")?.value || "nacional";
+    return {
+      eventId,
+      name: catalog[eventId]?.name,
+      quantity: Number(row.querySelector(".sim-evt-qty")?.value) || 0,
+      salePrice: Number(row.querySelector(".sim-evt-sale")?.value) || 0,
+      purchasePrice: Number(row.querySelector(".sim-evt-buy")?.value) || 0,
+      unitCost: Number(row.querySelector(".sim-evt-cost")?.value) || 0,
+    };
+  });
+}
+
+function renderEngineFields() {
+  const form = document.querySelector("#sim-form");
+  const mount = document.querySelector("#sim-engine-fields");
+  const productId = simProduct?.value || "pix";
+  const engine = isEngineProduct(productId);
+  form?.classList.toggle("is-engine", engine);
+  if (!mount) return;
+  if (!engine) {
+    mount.innerHTML = "";
+    return;
+  }
+
+  if (productId === "pix") {
+    const contract = ConfraEngine.PIX_CONTRACT;
+    mount.innerHTML = `
+      ${supplierSelectHtml()}
+      <label>Quantidade de PIX<input id="sim-pix-qty" type="number" min="0" step="1" value="1000" /></label>
+      <label>Ticket médio (R$)<input id="sim-pix-ticket" type="number" min="0" step="0.01" value="50" /></label>
+      <label>Venda às operações (R$)<input id="sim-pix-sell" type="number" min="0" step="0.01" value="${contract.sellPrice.toFixed(2)}" /></label>
+      <label>Custo do fornecedor (R$)<input id="sim-pix-buy" type="number" min="0" step="0.01" value="${contract.buyPrice.toFixed(2)}" /></label>
+      <label>Pulse (%)<input id="sim-pix-pulse" type="number" min="0" step="0.01" value="${(contract.pulseRate * 100).toFixed(0)}" /></label>
+      <label class="sim-check"><input id="sim-documented" type="checkbox" checked /> Custo em contrato/aditivo</label>
+    `;
+  } else if (productId === "tef") {
+    const contract = ConfraEngine.TEF_CONTRACT;
+    mount.innerHTML = `
+      ${supplierSelectHtml("ALL")}
+      ${tefBandInputs(contract)}
+      <label>Retenção TEF (%)<input id="sim-tef-ret" type="number" min="0" step="0.01" value="${(contract.retentionRate * 100).toFixed(2)}" /></label>
+      <label>Custo documentado (R$)<input id="sim-tef-cost" type="number" min="0" step="0.01" value="0" /></label>
+      <label class="sim-check"><input id="sim-documented" type="checkbox" checked /> Custo em contrato/aditivo</label>
+    `;
+  } else if (productId === "hub" || productId === "system") {
+    const catalog = productId === "system" ? ConfraEngine.SYSTEM_SERVICES : ConfraEngine.HUB_SERVICES;
+    const first = Object.keys(catalog)[0];
+    const service = catalog[first];
+    const label = productId === "system" ? "Serviço do SYSTEM" : "Serviço do HUB";
+    mount.innerHTML = `
+      ${supplierSelectHtml()}
+      <label>${label}<select id="sim-${productId}-service">${serviceOptions(catalog, first)}</select></label>
+      <label>Quantidade<input id="sim-${productId}-qty" type="number" min="0" step="1" value="10" /></label>
+      <label>Preço de venda (R$)<input id="sim-${productId}-sale" type="number" min="0" step="0.01" value="${service.salePrice.toFixed(2)}" /></label>
+      <label>Preço de compra (R$)<input id="sim-${productId}-buy" type="number" min="0" step="0.01" value="${service.purchasePrice.toFixed(2)}" /></label>
+      <label>Custo (R$)<input id="sim-${productId}-cost" type="number" min="0" step="0.01" value="${service.unitCost.toFixed(2)}" /></label>
+      <label class="sim-check"><input id="sim-documented" type="checkbox" checked /> Custo em contrato/aditivo</label>
+    `;
+    field(`sim-${productId}-service`)?.addEventListener("change", () => applyCatalogDefaults(productId));
+  } else if (productId === "universidade") {
+    mount.innerHTML = `
+      <div class="sim-course-board">
+        <div id="sim-uni-courses">
+          ${universidadeRowHtml("onboarding", 12)}
+          ${universidadeRowHtml("inicial", 8)}
+        </div>
+        <button type="button" class="sim-course-add" id="sim-uni-add">Adicionar curso vendido</button>
+      </div>
+      <label class="sim-check"><input id="sim-documented" type="checkbox" checked /> Custo em contrato/aditivo</label>
+    `;
+    mount.querySelectorAll(".sim-course-row").forEach((row) => bindUniversidadeRow(row));
+    mount.querySelector("#sim-uni-add")?.addEventListener("click", () => {
+      const list = mount.querySelector("#sim-uni-courses");
+      if (!list) return;
+      list.insertAdjacentHTML("beforeend", universidadeRowHtml(nextUniversidadeCourseId(list), 6));
+      bindUniversidadeRow(list.lastElementChild);
+      onEngineInput();
+    });
+  } else if (productId === "eventos") {
+    mount.innerHTML = `
+      <div class="sim-course-board">
+        <div id="sim-evt-events">
+          ${eventosRowHtml("nacional", 80)}
+          ${eventosRowHtml("regional", 40)}
+        </div>
+        <button type="button" class="sim-course-add" id="sim-evt-add">Adicionar evento vendido</button>
+      </div>
+      <label class="sim-check"><input id="sim-documented" type="checkbox" checked /> Custo em contrato/aditivo</label>
+    `;
+    mount.querySelectorAll(".sim-course-row").forEach((row) => bindEventosRow(row));
+    mount.querySelector("#sim-evt-add")?.addEventListener("click", () => {
+      const list = mount.querySelector("#sim-evt-events");
+      if (!list) return;
+      list.insertAdjacentHTML("beforeend", eventosRowHtml(nextEventosId(list), 25));
+      bindEventosRow(list.lastElementChild);
+      onEngineInput();
+    });
+  } else if (productId === "shopping") {
+    const meta = ConfraEngine.PERCENT_PRODUCTS[productId];
+    mount.innerHTML = `
+      <label>Vendas (R$)<input id="sim-pct-sales" type="number" min="0" step="0.01" value="10000" /></label>
+      <label>Percentual sobre as vendas (%)<input id="sim-pct-rate" type="number" min="0" step="0.01" value="${(meta.rate * 100).toFixed(2)}" /></label>
+    `;
+  }
+
+  mount.querySelectorAll("input, select").forEach((el) => {
+    el.addEventListener("input", onEngineInput);
+    el.addEventListener("change", onEngineInput);
+  });
+  syncTefBands();
+}
+
+function selectedOperation() {
+  const value = simOperation?.value;
+  const text = simOperation?.selectedOptions[0]?.text;
+  if (!value || value === "ALL" || value === "all") {
+    return window.ConfraEngine?.ALL_OPERATIONS_LABEL || "Todas as operações";
+  }
+  return text || "Confrapag";
+}
+
+function atOperationPhrase(operation) {
+  if (window.ConfraEngine?.atOperation) return ConfraEngine.atOperation(operation);
+  return operation === "Todas as operações" || operation === "ALL"
+    ? "em todas as operações (consolidado)"
+    : `na ${operation}`;
+}
+
+function collectEngineInput() {
+  const productId = simProduct?.value;
+  const operation = selectedOperation();
+  const year = Number(simYear?.value) || 2026;
+  const month = simMonth?.value || "Set";
+  const costDocumented = field("sim-documented")?.checked !== false;
+  if (productId === "pix") {
+    return {
+      productId: "pix",
+      operation,
+      year,
+      month,
+      costDocumented,
+      supplier: selectedSupplier(),
+      quantity: Number(field("sim-pix-qty")?.value) || 0,
+      ticket: Number(field("sim-pix-ticket")?.value) || 0,
+      sellPrice: Number(field("sim-pix-sell")?.value) || 0,
+      buyPrice: Number(field("sim-pix-buy")?.value) || 0,
+      pulseRate: (Number(field("sim-pix-pulse")?.value) || 0) / 100,
+    };
+  }
+  if (productId === "tef") {
+    return {
+      productId: "tef",
+      operation,
+      year,
+      month,
+      costDocumented,
+      supplier: selectedSupplier(),
+      tpvF3: tefBandValue("F3", "tpv"),
+      tpvF4: tefBandValue("F4", "tpv"),
+      tpvF5: tefBandValue("F5", "tpv"),
+      tpvF6: tefBandValue("F6", "tpv"),
+      tpvF7: tefBandValue("F7", "tpv"),
+      takeF3: (Number(field("sim-take-f3")?.value) || 0) / 100,
+      takeF4: (Number(field("sim-take-f4")?.value) || 0) / 100,
+      takeF5: (Number(field("sim-take-f5")?.value) || 0) / 100,
+      takeF6: (Number(field("sim-take-f6")?.value) || 0) / 100,
+      takeF7: (Number(field("sim-take-f7")?.value) || 0) / 100,
+      retentionRate: (Number(field("sim-tef-ret")?.value) || 0) / 100,
+      documentedCost: Number(field("sim-tef-cost")?.value) || 0,
+    };
+  }
+  if (productId === "hub" || productId === "system") {
+    return {
+      productId,
+      operation,
+      year,
+      month,
+      costDocumented,
+      supplier: selectedSupplier(),
+      serviceId: field(`sim-${productId}-service`)?.value || (productId === "system" ? "pdv" : "cred"),
+      quantity: Number(field(`sim-${productId}-qty`)?.value) || 0,
+      salePrice: Number(field(`sim-${productId}-sale`)?.value) || 0,
+      purchasePrice: Number(field(`sim-${productId}-buy`)?.value) || 0,
+      unitCost: Number(field(`sim-${productId}-cost`)?.value) || 0,
+    };
+  }
+  if (productId === "universidade") {
+    return {
+      productId: "universidade",
+      operation,
+      year,
+      month,
+      costDocumented,
+      courses: collectUniversidadeCourses(),
+    };
+  }
+  if (productId === "eventos") {
+    return {
+      productId: "eventos",
+      operation,
+      year,
+      month,
+      costDocumented,
+      events: collectEventosEvents(),
+    };
+  }
+  if (productId === "shopping") {
+    return {
+      productId,
+      operation,
+      year,
+      month,
+      costDocumented: true,
+      sales: Number(field("sim-pct-sales")?.value) || 0,
+      rate: (Number(field("sim-pct-rate")?.value) || 0) / 100,
+    };
+  }
+  return null;
+}
+
+function getEngineSettlement() {
+  const input = collectEngineInput();
+  if (!input || !window.ConfraEngine) return null;
+  try {
+    return ConfraEngine.simulateProduct(input);
+  } catch (_err) {
+    return null;
+  }
+}
+
 function getSimValues() {
+  const settlement = getEngineSettlement();
+  if (settlement) {
+    return {
+      productId: settlement.productId,
+      product: ECOSYSTEM.products[settlement.productId],
+      amount: settlement.amount,
+      revenue: settlement.revenue,
+      commission: settlement.split.operation30,
+      operation: settlement.operation,
+      net: settlement.split.network70,
+      breakdown: [
+        {
+          id: settlement.productId,
+          name: settlement.productName,
+          amount: settlement.amount,
+          revenue: settlement.revenue,
+          commission: settlement.split.operation30,
+          net: settlement.split.network70,
+        },
+      ],
+      settlement,
+    };
+  }
+
   const productId = simProduct?.value || "pix";
   const entries = productEntries(productId);
   const product =
@@ -550,7 +1035,7 @@ function getSimValues() {
   const amount = Number(simAmount?.value) || 0;
   const revenue = Number(simRevenue?.value) || 0;
   const commission = Number(simCommission?.value) || 0;
-  const operation = simOperation?.selectedOptions[0]?.text || "Operação 01";
+  const operation = selectedOperation();
   const net = Math.max(revenue - commission, 0);
   const breakdown = entries.map(([id, item]) => {
     const itemRevenue = amount * item.feeRate;
@@ -564,10 +1049,17 @@ function getSimValues() {
       net: Math.max(itemRevenue - itemCommission, 0),
     };
   });
-  return { productId, product, amount, revenue, commission, operation, net, breakdown };
+  return { productId, product, amount, revenue, commission, operation, net, breakdown, settlement: null };
 }
 
 function applySuggestedRates() {
+  const settlement = getEngineSettlement();
+  if (settlement && simRevenue && simCommission) {
+    simRevenue.value = settlement.revenue.toFixed(2);
+    simCommission.value = settlement.split.operation30.toFixed(2);
+    if (simAmount) simAmount.value = settlement.amount.toFixed(2);
+    return;
+  }
   const amount = Number(simAmount?.value) || 0;
   const entries = productEntries(simProduct?.value || "pix");
   if (!entries.length || !simRevenue || !simCommission) return;
@@ -618,13 +1110,129 @@ function donutSvg(slices) {
     <circle cx="70" cy="70" r="52" fill="none" stroke="#e8eef4" stroke-width="16"></circle>
     ${rings}
     <text x="70" y="66" text-anchor="middle" font-size="11" fill="#5b6b7c">Líquido</text>
-    <text x="70" y="84" text-anchor="middle" font-size="14" font-weight="800" fill="#0b1f4d">${pct(slices[1]?.value || 0, total)}</text>
+    <text x="70" y="84" text-anchor="middle" font-size="14" font-weight="800" fill="#0b1f4d">${pct(slices.length > 1 ? slices[1]?.value || 0 : slices[0]?.value || 0, total)}</text>
   </svg>`;
+}
+
+function renderEngineTrack(settlement) {
+  if (!simTrack || !settlement?.pipeline) return;
+  const signature = settlement.pipeline.map((step) => step.text).join("|");
+  if (simTrack.dataset.signature === signature) return;
+  simTrack.dataset.signature = signature;
+  simTrack.innerHTML = settlement.pipeline
+    .map(
+      (step) => `<li data-step="${step.n}">
+        <span class="sim-step-n">${step.n}</span>
+        <strong>${step.name}</strong>
+        <p>${step.text}</p>
+      </li>`
+    )
+    .join("");
+}
+
+function renderEngineReceipt(status, values) {
+  const { product, operation, amount, revenue, settlement } = values;
+  const maxLine = Math.max(...settlement.lines.map((line) => Math.abs(line.amount)), 1);
+  const supplierText =
+    settlement.supplier && window.ConfraEngine?.PIX_SUPPLIER_LABELS
+      ? ConfraEngine.PIX_SUPPLIER_LABELS[settlement.supplier] || settlement.supplier
+      : settlement.supplier;
+  const extra = [settlement.serviceName, supplierText].filter(Boolean).join(" · ") || settlement.month;
+  const noSplit = settlement.productId === "universidade" || settlement.productId === "eventos";
+  const isEventos = settlement.productId === "eventos";
+  renderEngineTrack(settlement);
+  const kpis = noSplit
+    ? `<article class="dash-kpi tx"><span>${isEventos ? "Receita dos eventos" : "Receita dos cursos"}</span><strong>${money(amount)}</strong><small>${isEventos ? "Ingressos do período" : "Matrículas do período"}</small></article>
+      <article class="dash-kpi rev"><span>Venda apurada</span><strong>${money(revenue)}</strong><small>${isEventos ? "Catálogo do Confra Eventos" : "Catálogo da Universidade"}</small></article>
+      <article class="dash-kpi cost"><span>Custo documentado</span><strong>${money(settlement.cost)}</strong><small>${isEventos ? "Produção, estrutura e operação" : "Conteúdo, plataforma e operação"}</small></article>
+      <article class="dash-kpi profit"><span>${isEventos ? "Lucro do Confra Eventos" : "Lucro da Universidade"}</span><strong>${money(settlement.profit)}</strong><small>100% na subconta, sem split 70/30</small></article>`
+    : `<article class="dash-kpi tx"><span>Volume / TPV</span><strong>${money(amount)}</strong><small>Base da apuração</small></article>
+      <article class="dash-kpi rev"><span>Receita (venda)</span><strong>${money(revenue)}</strong><small>Take ${pct(settlement.dashboardRow.comissao, settlement.dashboardRow.tpv)}</small></article>
+      <article class="dash-kpi cost"><span>Custo documentado</span><strong>${money(settlement.cost)}</strong><small>Pulse ${money(settlement.pulse)} · retenção ${money(settlement.retention)}</small></article>
+      <article class="dash-kpi profit"><span>Lucro</span><strong>${money(settlement.profit)}</strong><small>Venda − compra − custo</small></article>
+      <article class="dash-kpi com"><span>Repasse operação 30%</span><strong>${money(values.commission)}</strong><small>${pct(values.commission, settlement.profit)} do lucro</small></article>
+      <article class="dash-kpi net"><span>Repasse rede 70%</span><strong>${money(values.net)}</strong><small>${pct(values.net, settlement.profit)} do lucro</small></article>`;
+  const donut = noSplit
+    ? `<h4>Destino do lucro</h4>
+        <div class="dash-donut-wrap">
+          ${donutSvg([{ value: settlement.profit, color: "#1e4d8c" }])}
+          <ul class="dash-donut-list">
+            <li><span><b style="background:var(--system)"></b>${isEventos ? "Eventos" : "Universidade"} 100%</span><span>${money(settlement.profit)}</span></li>
+            <li><span><b style="background:var(--tef)"></b>Custo</span><span>${money(settlement.cost)}</span></li>
+            <li><span><b style="background:var(--pix)"></b>Receita</span><span>${money(settlement.revenue)}</span></li>
+          </ul>
+        </div>`
+    : `<h4>Split do lucro</h4>
+        <div class="dash-donut-wrap">
+          ${donutSvg([
+            { value: values.commission, color: "#e87722" },
+            { value: values.net, color: "#1e4d8c" },
+          ])}
+          <ul class="dash-donut-list">
+            <li><span><b style="background:var(--tef)"></b>Operação 30%</span><span>${money(values.commission)}</span></li>
+            <li><span><b style="background:var(--system)"></b>Rede 70%</span><span>${money(values.net)}</span></li>
+            <li><span><b style="background:var(--pix)"></b>Lucro</span><span>${money(settlement.profit)}</span></li>
+          </ul>
+        </div>`;
+  simReceipt.innerHTML = `
+    <div class="dash-head">
+      <div>
+        <h3>${status || "Apuração pelo motor de regras"}</h3>
+        <p>Subconta ${settlement.subaccount}. Destino: conta concentradora no MT Pagamentos.</p>
+      </div>
+      <div class="dash-badges">
+        <span class="dash-badge">${product.name}</span>
+        <span class="dash-badge">${operation}</span>
+        <span class="dash-badge">${settlement.month}/${settlement.year}${extra && extra !== settlement.month ? ` · ${extra}` : ""}</span>
+      </div>
+    </div>
+    <div class="dash-kpis engine${noSplit ? " uni" : ""}">
+      ${kpis}
+    </div>
+    <div class="dash-charts">
+      <article class="dash-card">
+        <h4>Razão da apuração</h4>
+        <div class="dash-bar-chart">
+          ${settlement.lines
+            .map((line) => {
+              const width = (Math.abs(line.amount) / maxLine) * 100;
+              const color = line.role === "cost" || line.role === "fee" ? "var(--tef)" : line.role === "split" ? "var(--system)" : "var(--pix)";
+              return `<div class="dash-bar-row">
+                <strong>${line.label}</strong>
+                <div>
+                  <div class="dash-bar-track" title="${money(line.amount)}"><span style="width:${width}%;background:${color}"></span></div>
+                </div>
+              </div>`;
+            })
+            .join("")}
+        </div>
+      </article>
+      <article class="dash-card">
+        ${donut}
+      </article>
+    </div>
+    <table class="sim-breakdown">
+      <thead>
+        <tr><th>Conta</th><th>Descrição</th><th>Valor</th></tr>
+      </thead>
+      <tbody>
+        ${settlement.lines
+          .map((line) => `<tr><td>${line.code}</td><td>${line.label}</td><td>${money(line.amount)}</td></tr>`)
+          .join("")}
+      </tbody>
+    </table>
+    <ul class="checks">${settlement.notes.map((note) => `<li>${note}</li>`).join("")}</ul>
+  `;
 }
 
 function renderLiveReceipt(status) {
   if (!simReceipt) return;
-  const { productId, product, amount, revenue, commission, operation, net, breakdown } = getSimValues();
+  const values = getSimValues();
+  if (values.settlement) {
+    renderEngineReceipt(status, values);
+    return;
+  }
+  const { productId, product, amount, revenue, commission, operation, net, breakdown } = values;
   const rows = breakdown.length ? breakdown : [
     { id: productId, name: product.name, amount, revenue, commission, net },
   ];
@@ -716,6 +1324,7 @@ function renderLiveReceipt(status) {
       const id = el.getAttribute("data-filter-product");
       if (!id || !simProduct || !ECOSYSTEM.products[id]) return;
       simProduct.value = id;
+      renderEngineFields();
       applySuggestedRates();
       renderLiveReceipt();
       setActiveProduct(id);
@@ -729,11 +1338,21 @@ function csvCell(value) {
 }
 
 function exportSimFile() {
-  const { productId, product, amount, revenue, commission, operation, net, breakdown } = getSimValues();
+  const { productId, product, amount, revenue, commission, operation, net, breakdown, settlement } = getSimValues();
   const when = new Date().toLocaleString("pt-BR");
-  const brl = (value) => value.toFixed(2).replace(".", ",");
-  const rows =
-    productId === "all"
+  const brl = (value) => Number(value || 0).toFixed(2).replace(".", ",");
+  const rows = settlement
+    ? [
+        ["Campo", "Valor"],
+        ["Produto", settlement.productName],
+        ["Operação", operation],
+        ["Competência", `${settlement.month}/${settlement.year}`],
+        ["Subconta", settlement.subaccount],
+        ...settlement.lines.map((line) => [line.label, brl(line.amount)]),
+        ["Destino da liquidação", "Conta concentradora no MT Pagamentos"],
+        ["Data e hora", when],
+      ]
+    : productId === "all"
       ? [
           ["Produto", "Operação", "Valor da transação (R$)", "Valor da receita (R$)", "Valor da comissão (R$)", "Receita líquida (R$)", "Data e hora"],
           ...breakdown.map((row) => [
@@ -759,12 +1378,37 @@ function exportSimFile() {
           ["Data e hora", when],
         ];
   const csv = `\uFEFF${rows.map((row) => row.map(csvCell).join(";")).join("\r\n")}`;
-  const blob = new Blob([csv], { type: "text/csv;charset=utf-8;" });
+  downloadBlob(csv, `simulacao-${slug(operation)}-${stamp()}.csv`, "text/csv;charset=utf-8;");
+}
+
+function exportDashboardJson() {
+  const { settlement } = getSimValues();
+  if (!settlement || !window.ConfraEngine) return;
+  const payload = ConfraEngine.toDashboardPayload(settlement);
+  downloadBlob(
+    JSON.stringify(payload, null, 2),
+    `simulacao-${settlement.productId}-${slug(settlement.operation)}-${stamp()}.json`,
+    "application/json"
+  );
+}
+
+function stamp() {
+  return new Date().toISOString().slice(0, 19).replace(/[:T]/g, "-");
+}
+
+function slug(value) {
+  return String(value || "operacao")
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/\s+/g, "-")
+    .toLowerCase();
+}
+
+function downloadBlob(content, filename, type) {
+  const blob = new Blob([content], { type });
   const link = document.createElement("a");
-  const stamp = new Date().toISOString().slice(0, 19).replace(/[:T]/g, "-");
-  const op = operation.replace(/\s+/g, "-").toLowerCase();
   link.href = URL.createObjectURL(blob);
-  link.download = `simulacao-${op}-${stamp}.csv`;
+  link.download = filename;
   document.body.appendChild(link);
   link.click();
   link.remove();
@@ -778,10 +1422,25 @@ function renderSimulatorOptions() {
     Object.entries(ECOSYSTEM.products)
       .map(([id, product]) => `<option value="${id}">${product.name}</option>`)
       .join("");
-  simOperation.innerHTML = Array.from({ length: 20 }, (_, index) => {
-    const n = String(index + 1).padStart(2, "0");
-    return `<option value="${index + 1}">Operação ${n}</option>`;
-  }).join("");
+  const operations = window.ConfraEngine?.OPERATIONS;
+  const allOpsLabel = window.ConfraEngine?.ALL_OPERATIONS_LABEL || "Todas as operações";
+  const allOpsOption = `<option value="ALL">${allOpsLabel}</option>`;
+  simOperation.innerHTML = operations?.length
+    ? allOpsOption + operations.map((name) => `<option value="${name}">${name}</option>`).join("")
+    : allOpsOption +
+      Array.from({ length: 20 }, (_, index) => {
+        const n = String(index + 1).padStart(2, "0");
+        return `<option value="${index + 1}">Operação ${n}</option>`;
+      }).join("");
+  simOperation.value = "ALL";
+  if (simMonth) {
+    const months = window.ConfraEngine?.MONTHS || ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"];
+    simMonth.innerHTML = months
+      .map((month) => `<option value="${month}"${month === "Set" ? " selected" : ""}>${month}</option>`)
+      .join("");
+  }
+  simProduct.value = "pix";
+  renderEngineFields();
   applySuggestedRates();
   renderLiveReceipt();
 }
@@ -893,19 +1552,23 @@ function markSimStep(n, state) {
 
 function simulate(event) {
   event.preventDefault();
-  const { productId, product, amount, revenue, commission, operation, net } = getSimValues();
+  const { productId, product, amount, revenue, commission, operation, net, settlement } = getSimValues();
 
-  simTrack?.querySelectorAll("li").forEach((item) => item.classList.remove("is-on", "is-done"));
   setActiveProduct(productId);
   if (productId !== "all") openTab(productId);
 
-  const labels = [
-    `Captura da transação ${product.name} na ${operation}`,
-    `Apuração por produto, operação, canal e estabelecimento`,
-    `Cálculo da receita de ${money(revenue)} sobre ${money(amount)}`,
-    `Distribuição da comissão de ${money(commission)} e líquido de ${money(net)}`,
-    `Relatório da ${operation} e liquidação na conta concentradora do MT`,
-  ];
+  const labels = settlement
+    ? settlement.pipeline.map((step) => step.text)
+    : [
+        `Captura da transação ${product.name} ${atOperationPhrase(operation)}`,
+        `Apuração por produto, operação, canal e estabelecimento`,
+        `Cálculo da receita de ${money(revenue)} sobre ${money(amount)}`,
+        `Distribuição da comissão de ${money(commission)} e líquido de ${money(net)}`,
+        `Relatório ${operation === "Todas as operações" ? "consolidado de todas as operações" : `da ${operation}`} e liquidação na conta concentradora do MT`,
+      ];
+
+  if (settlement) renderEngineTrack(settlement);
+  simTrack?.querySelectorAll("li").forEach((item) => item.classList.remove("is-on", "is-done"));
 
   let step = 1;
   markSimStep(step, "on");
@@ -1024,6 +1687,7 @@ document.addEventListener("keydown", (event) => {
 });
 document.querySelector("#play-pipeline")?.addEventListener("click", playPipeline);
 simProduct?.addEventListener("change", () => {
+  renderEngineFields();
   applySuggestedRates();
   renderLiveReceipt();
   setActiveProduct(simProduct.value);
@@ -1035,9 +1699,12 @@ simAmount?.addEventListener("input", () => {
 });
 simRevenue?.addEventListener("input", () => renderLiveReceipt());
 simCommission?.addEventListener("input", () => renderLiveReceipt());
-simOperation?.addEventListener("change", () => renderLiveReceipt());
+simOperation?.addEventListener("change", () => onEngineInput());
+simMonth?.addEventListener("change", () => onEngineInput());
+simYear?.addEventListener("input", () => onEngineInput());
 document.querySelector("#sim-form")?.addEventListener("submit", simulate);
 document.querySelector("#sim-export")?.addEventListener("click", exportSimFile);
+document.querySelector("#sim-export-dash")?.addEventListener("click", exportDashboardJson);
 window.addEventListener("resize", drawSpokes);
 window.addEventListener("load", drawSpokes);
 drawSpokes();

@@ -353,7 +353,9 @@ function getSimValues() {
   const amount = Number(simAmount?.value) || 0;
   const revenue = Number(simRevenue?.value) || 0;
   const commission = Number(simCommission?.value) || 0;
-  const operation = simOperation?.selectedOptions[0]?.text || "Operação 01";
+  const operation = simOperation?.value === "all" || simOperation?.value === "ALL"
+    ? "Todas as operações"
+    : simOperation?.selectedOptions[0]?.text || "Operação 01";
   const net = Math.max(revenue - commission, 0);
   const breakdown = entries.map(([id, item]) => {
     const itemRevenue = amount * item.feeRate;
@@ -577,10 +579,13 @@ function renderSimulatorOptions() {
     Object.entries(ECOSYSTEM.products)
       .map(([id, product]) => `<option value="${id}">${product.name}</option>`)
       .join("");
-  simOperation.innerHTML = Array.from({ length: 16 }, (_, index) => {
-    const n = String(index + 1).padStart(2, "0");
-    return `<option value="${index + 1}">Operação ${n}</option>`;
-  }).join("");
+  simOperation.innerHTML =
+    `<option value="all">Todas as operações</option>` +
+    Array.from({ length: 16 }, (_, index) => {
+      const n = String(index + 1).padStart(2, "0");
+      return `<option value="${index + 1}">Operação ${n}</option>`;
+    }).join("");
+  simOperation.value = "all";
   applySuggestedRates();
   renderLiveReceipt();
 }
@@ -695,11 +700,11 @@ function simulate(event) {
   if (productId !== "all") openTab(productId);
 
   const labels = [
-    `Captura da transação ${product.name} na ${operation}`,
+    `Captura da transação ${product.name} ${operation === "Todas as operações" ? "em todas as operações (consolidado)" : `na ${operation}`}`,
     `Apuração por produto, operação, canal e estabelecimento`,
     `Cálculo da receita de ${money(revenue)} sobre ${money(amount)}`,
     `Distribuição da comissão de ${money(commission)} e líquido de ${money(net)}`,
-    `Relatório da ${operation} e liquidação na conta concentradora do MT`,
+    `Relatório ${operation === "Todas as operações" ? "consolidado de todas as operações" : `da ${operation}`} e liquidação na conta concentradora do MT`,
   ];
 
   let step = 1;

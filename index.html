@@ -187,7 +187,7 @@
               <svg viewBox="0 0 48 48"><path d="M8 20 24 12l16 8-16 8-16-8Z"/><path d="M14 24v10c4 3 16 3 20 0V24"/></svg>
             </div>
             <h3>Universidade Confrapag</h3>
-            <p>Treinamento contínuo para nossa base de clientes e colaboradores.</p>
+            <p>Catálogo próprio de cursos para clientes da base e colaboradores.</p>
           </article>
 
           <article class="product-card eventos" data-product="eventos" tabindex="0">
@@ -195,7 +195,7 @@
               <svg viewBox="0 0 48 48"><rect x="8" y="12" width="32" height="28" rx="3"/><path d="M8 20h32M16 8v8M32 8v8"/></svg>
             </div>
             <h3>Confra Eventos</h3>
-            <p>Convenção Nacional, Regionais e Paulo Por Aí.</p>
+            <p>Catálogo próprio de Convenção Nacional, Regionais e Paulo Por Aí.</p>
           </article>
 
           <aside class="side-card clients">
@@ -220,7 +220,7 @@
     <section class="section" id="simulador">
       <div class="section-head">
         <h2>Simulador de transação</h2>
-        <p>Filtros no topo, KPIs e gráficos abaixo — dashboard dinâmico no modelo Power BI, atualizado em tempo real.</p>
+        <p>PIX, TEF e HUB usam o motor de regras (centavos, contrato e split 70/30). O JSON sai no formato do dashboard de TPV e comissão.</p>
       </div>
       <div class="sim-board">
         <form class="sim-form" id="sim-form">
@@ -229,23 +229,35 @@
             <select id="sim-product" name="product"></select>
           </label>
           <label>
-            Valor da transação (R$)
-            <input id="sim-amount" name="amount" type="number" min="0" step="0.01" value="1000" />
-          </label>
-          <label>
-            Valor da receita (R$)
-            <input id="sim-revenue" name="revenue" type="number" min="0" step="0.01" />
-          </label>
-          <label>
-            Valor da comissão (R$)
-            <input id="sim-commission" name="commission" type="number" min="0" step="0.01" />
-          </label>
-          <label>
             Operação
             <select id="sim-operation" name="operation"></select>
           </label>
-          <button class="btn" type="submit">Simular transação</button>
-          <button class="btn btn-export" type="button" id="sim-export">Exportar arquivo</button>
+          <label>
+            Competência
+            <select id="sim-month" name="month"></select>
+          </label>
+          <label>
+            Ano
+            <input id="sim-year" name="year" type="number" min="2024" step="1" value="2026" />
+          </label>
+          <div class="sim-engine-fields" id="sim-engine-fields"></div>
+          <label class="sim-generic">
+            Valor da transação (R$)
+            <input id="sim-amount" name="amount" type="number" min="0" step="0.01" value="1000" />
+          </label>
+          <label class="sim-generic">
+            Valor da receita (R$)
+            <input id="sim-revenue" name="revenue" type="number" min="0" step="0.01" />
+          </label>
+          <label class="sim-generic">
+            Valor da comissão (R$)
+            <input id="sim-commission" name="commission" type="number" min="0" step="0.01" />
+          </label>
+          <div class="sim-form-actions">
+            <button class="btn" type="submit">Simular transação</button>
+            <button class="btn btn-export" type="button" id="sim-export">Exportar CSV</button>
+            <button class="btn btn-export" type="button" id="sim-export-dash">Exportar para o dashboard</button>
+          </div>
         </form>
         <div class="sim-receipt dash" id="sim-receipt" aria-live="polite"></div>
         <div class="sim-flow">
@@ -269,7 +281,7 @@
 
     <section class="section dark" id="mecanismo">
       <div class="section-head light">
-        <p class="bar-title">Mecanismo de apuração e comissionamento</p>
+        <p class="bar-title">Mecanismo de apuração, comissionamento e conciliação</p>
         <h2>Do evento da transação ao relatório gerencial</h2>
         <p>Um pipeline único, automático e auditável. Independente do produto de origem, o tratamento segue as mesmas cinco etapas.</p>
         <button class="btn btn-light" type="button" id="play-pipeline">Percorrer as 5 etapas</button>
@@ -297,7 +309,7 @@
             <span class="dot pix"></span><span class="dot tef"></span><span class="dot system"></span><span class="dot hub"></span>
           </div>
           <h3>Processadas nos produtos</h3>
-          <p>Confra PIX, Confra TEF, Confra SYSTEM e Confra HUB tratam cada evento na ponta.</p>
+          <p>Confra PIX, Confra TEF, Confra SYSTEM, Confra HUB, Weki e BaaS, Confra Shopping, Universidade Confrapag e Confra Eventos tratam cada evento na ponta.</p>
         </li>
         <li>
           <div class="mf-icon mt" aria-hidden="true"><span>MT</span></div>
@@ -360,6 +372,7 @@
     </div>
   </div>
 
+  <script src="engine.bundle.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

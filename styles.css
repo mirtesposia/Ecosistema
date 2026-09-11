@@ -380,6 +380,23 @@ a {
   color: #b7c6d8;
 }
 
+#mecanismo .section-head.light {
+  max-width: 920px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+#mecanismo .section-head.light h2 {
+  text-wrap: balance;
+}
+
+#mecanismo .section-head.light p:not(.bar-title) {
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .eco-stage {
   position: relative;
   display: grid;
@@ -1466,7 +1483,7 @@ a {
 
 .sim-form {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr)) auto auto;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 12px;
   align-items: end;
   background: var(--white);
@@ -1474,6 +1491,92 @@ a {
   border-radius: 18px;
   padding: 18px;
 }
+
+.sim-engine-fields {
+  display: contents;
+}
+
+.sim-form label.is-hidden {
+  display: none !important;
+}
+
+.sim-course-board {
+  grid-column: 1 / -1;
+  display: grid;
+  gap: 10px;
+}
+
+.sim-course-row {
+  display: grid;
+  grid-template-columns: 1.5fr 0.95fr 0.7fr repeat(3, 0.75fr) auto;
+  gap: 8px;
+  align-items: end;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #f6f8fb;
+}
+
+.sim-course-row.evt {
+  grid-template-columns: 1.6fr 0.7fr repeat(3, 0.75fr) auto;
+}
+
+.sim-course-add,
+.sim-uni-remove {
+  height: 44px;
+  border-radius: 10px;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.sim-course-add {
+  justify-self: start;
+  padding: 0 16px;
+  border: 1px dashed var(--navy);
+  background: var(--white);
+  color: var(--navy);
+}
+
+.sim-uni-remove {
+  padding: 0 12px;
+  border: 1px solid var(--line);
+  background: var(--white);
+  color: var(--muted);
+}
+
+.sim-form-actions {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.sim-form .sim-check {
+  height: auto;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+}
+
+.sim-form .sim-check input {
+  width: 18px;
+  height: 18px;
+  padding: 0;
+}
+
+.sim-form.is-engine .sim-generic {
+  display: none;
+}
+
+.dash-kpis.engine.uni {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.dash-kpi.cost { border-left-color: #7a2d91; }
+.dash-kpi.profit { border-left-color: var(--green); }
 
 .sim-form label {
   display: grid;
@@ -1913,7 +2016,9 @@ a {
     grid-column: 1 / -1;
   }
 
-  .dash-kpis {
+  .dash-kpis,
+  .dash-kpis.engine,
+  .dash-kpis.engine.uni {
     grid-template-columns: 1fr 1fr;
   }
 
@@ -1982,7 +2087,9 @@ a {
   }
 
   .kpis,
-  .dash-kpis {
+  .dash-kpis,
+  .dash-kpis.engine,
+  .dash-kpis.engine.uni {
     grid-template-columns: 1fr 1fr;
   }
 
@@ -2065,6 +2172,16 @@ a {
     font-size: 16px;
   }
 
+  .sim-course-row {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .sim-course-row label:first-child,
+  .sim-uni-remove,
+  .sim-course-add {
+    grid-column: 1 / -1;
+  }
+
   .sim-form .btn {
     grid-column: 1 / -1;
   }
@@ -2129,7 +2246,9 @@ a {
 @media (max-width: 420px) {
   .kpis,
   .cost-cards,
-  .dash-kpis {
+  .dash-kpis,
+  .dash-kpis.engine,
+  .dash-kpis.engine.uni {
     grid-template-columns: 1fr;
   }
 
