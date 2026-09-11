@@ -254,7 +254,7 @@ const ECOSYSTEM = {
       title: "Dimensões da apuração",
       text: "Cada transação é classificada em múltiplos eixos para garantir rastreabilidade e conferência.",
       items: [
-        "Produto de origem (Confra PIX, Confra TEF, Confra SYSTEM, Confra HUB)",
+        "Produto de origem (Confra PIX, Confra TEF, Confra SYSTEM, Confra HUB, Weki e BaaS, Confra Shopping, Universidade Confrapag e Confra Eventos)",
         "CNPJ e subconta da unidade de negócio, na conta Confrapagmtos",
         "Operação, licenciado e estabelecimento",
         "Data de captura, liquidação e competência",
