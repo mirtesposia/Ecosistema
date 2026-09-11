@@ -255,7 +255,7 @@ const ECOSYSTEM = {
       text: "Cada transação é classificada em múltiplos eixos para garantir rastreabilidade e conferência.",
       items: [
         "Produto de origem (Confra PIX, Confra TEF, Confra SYSTEM, Confra HUB, Weki e BaaS, Confra Shopping, Universidade Confrapag e Confra Eventos)",
-        "CNPJ e subconta da unidade de negócio, na conta Confrapagmtos",
+        "CNPJ e subconta da unidade de negócio, na conta concentradora",
         "Operação, licenciado e estabelecimento",
         "Data de captura, liquidação e competência",
       ],
@@ -272,7 +272,7 @@ const ECOSYSTEM = {
     },
     {
       title: "Governança da conta MT",
-      text: "A conta concentradora (Confrapagmtos) no MT Pagamentos é o ponto único de liquidez, com subcontas por produto.",
+      text: "A conta concentradora no MT Pagamentos é o ponto único de liquidez, com subcontas por produto.",
       items: [
         "Receita do fornecedor entra, é apurada e repassada às operações",
         "Central de custos concilia contrato × produção via API",
@@ -285,7 +285,7 @@ const ECOSYSTEM = {
     { n: "Camada 1", title: "Origem", text: "Estabelecimentos Comerciais (EC) e usuários finais geram transações nos canais Confra PIX, Confra TEF, Confra SYSTEM e Confra HUB." },
     { n: "Camada 2", title: "Produtos", text: "Cada produto processa, autoriza e registra o evento, mantendo a especialização da ponta." },
     { n: "Camada 3", title: `Central ${LOGO}`, text: "Conciliação, classificação, regras de comissão e visão única das 20 operações." },
-    { n: "Camada 4", title: "Conta MT", text: "Liquidação na conta Confrapagmtos, com CNPJ e subconta por produto. Único ponto de entrada de receita do ecossistema." },
+    { n: "Camada 4", title: "Conta MT", text: "Liquidação na conta concentradora, com CNPJ e subconta por produto. Único ponto de entrada de receita do ecossistema." },
     { n: "Camada 5", title: "Distribuição", text: "Repasses a parceiros, extratos, dashboards e trilha de auditoria para gestão e compliance." },
   ],
   benefits: [
